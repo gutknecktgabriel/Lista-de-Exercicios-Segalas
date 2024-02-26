@@ -18,6 +18,7 @@ public class Intermediario_5 {
     public static void ordenar() {
         Scanner terminal = new Scanner(System.in);
         int maior = 0;
+        int seila = 0;
         int menor = 0;
         int meio = 0;
         System.out.println("Informe o primeiro número");
