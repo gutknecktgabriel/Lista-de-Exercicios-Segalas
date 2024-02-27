@@ -21,14 +21,14 @@ public class Intermediario_7 {
         System.out.print("Informe o valor da sua compra: ");
         valorCompra = scanner.nextDouble();
 
-        if (valorCompra > 500){
+        if (valorCompra > 500) {
             porcentagemDesconto = ((valorCompra - 500) / 100);
-            if (porcentagemDesconto > 25){
+            if (porcentagemDesconto > 25) {
                 porcentagemDesconto = 25;
             }
         }
         valorFinal = valorCompra - (valorCompra * (porcentagemDesconto / 100));
         System.out.println(porcentagemDesconto);
-        System.out.println("O valor final da sua compra é: "+  valorFinal);
+        System.out.println("O valor final da sua compra é: " + valorFinal);
     }
 }
