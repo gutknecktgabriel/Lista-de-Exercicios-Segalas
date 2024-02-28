@@ -1,2 +1,4 @@
-package Exercicios.Intermediario43;public class Intermediario_13 {
+package Exercicios.Intermediario43;
+
+public class Intermediario_13 {
 }
