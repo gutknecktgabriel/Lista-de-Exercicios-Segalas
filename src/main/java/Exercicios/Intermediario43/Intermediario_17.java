@@ -24,6 +24,6 @@ public class Intermediario_17 {
             totalIdade += idade;
         }
         System.out.print("Quantidade de pessoas com mais de 90kg: " + peso);
-        System.out.print("Média de idade: ");
+        System.out.print("Média de idade: " + (totalIdade / 7 ));
     }
 }
