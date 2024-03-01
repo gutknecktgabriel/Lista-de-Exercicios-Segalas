@@ -16,16 +16,19 @@ public class Intermediario_18 {
         int idade = 0;
         double peso = 0;
         double altura = 0;
-        String cordosOlhos;
+        String cordosOlhos = null;
         String cordosCabelos;
         int contagemPesoeIdade = 0;
         int idadeTotal = 0;
         int contagemAlturaMenorQue150 = 0;
         int contagemOlhoAzul = 0;
         int ruivaSemOlhoAzul = 0;
+        int  resultadoSomaOlhoAzul = 0;
+        int contagemTotal = 0;
+        double porcentagem = 0;
 
 
-        for (int i = 1; i <= 4; i++) {
+        for (int i = 1; i <= 2; i++) {
             System.out.print("Informe a idade da pessoa " + i + ":");
             idade = scanner.nextInt();
 
@@ -43,20 +46,27 @@ public class Intermediario_18 {
 
             if (idade > 50 && peso < 60){
                 contagemPesoeIdade++;
-            } else if (altura <1.50) {
+            }
+            if (altura <1.50) {
                 idadeTotal += idade;
                 contagemAlturaMenorQue150++;
-            } else if (cordosOlhos.equalsIgnoreCase("A")) {
+            }
+            if (cordosOlhos.equalsIgnoreCase("A")) {
                     contagemOlhoAzul++;
-            } else if (cordosCabelos.equalsIgnoreCase("R")  && !cordosOlhos.equalsIgnoreCase("A")) {
+            }
+            else if (cordosCabelos.equalsIgnoreCase("R")  && !cordosOlhos.equalsIgnoreCase("A")) {
                 ruivaSemOlhoAzul++;
             }
+            contagemTotal++;
+             porcentagem = (contagemOlhoAzul * 100) / contagemTotal;
         }
         System.out.println("Quantidade de pessoas com idade superior a 50 anos e peso inferior a 60 quilos: " + contagemPesoeIdade);
 
-        System.out.println("A média das idades das pessoas com altura inferior a 1,50: " + (contagemAlturaMenorQue150 + idadeTotal / 4));
+        System.out.println("A média das idades das pessoas com altura inferior a 1,50: " + idadeTotal / contagemAlturaMenorQue150);
 
         System.out.println("Quantidade de pessoas ruivas que não possuem olhos azuis" + ruivaSemOlhoAzul);
+
+        System.out.println("Porcentagem de pessoas com olhos azuis entre as pessoas analisadas: " + porcentagem + "%");
 
     }
 }
