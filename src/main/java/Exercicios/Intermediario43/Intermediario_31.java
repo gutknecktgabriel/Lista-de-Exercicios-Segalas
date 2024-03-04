@@ -19,6 +19,8 @@ public class Intermediario_31 {
             mediadeIdades = somadeIdades / 4;
         }
         System.out.println("A média de idade é: " + mediadeIdades + " anos de idade");
+        System.out.println("Digite 0 para finalizar o programa...");
+        idade = scanner.nextInt();
 
     }
 }
