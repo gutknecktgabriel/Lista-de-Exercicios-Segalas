@@ -14,6 +14,7 @@ public class Intermediario_30 {
         int menorNota = 0;
         int totalAlunosReprovados = 0;
         double porcentagemDeAlunosReprovados = 0;
+        int alunosReprovadosFrequecia = 0;
         int nota1;
         int nota2;
         int nota3;
@@ -46,16 +47,25 @@ public class Intermediario_30 {
             }
             if (mediaFinal > maiorNota) {
                 maiorNota = mediaFinal;
-            } else if (menorNota < mediaFinal){
+            } else if (menorNota < mediaFinal) {
                 menorNota = mediaFinal;
+            } else {
+                mediaFinal = menorNota;
             }
-            if (mediaFinal < 6 && frequencia < 30){
+            if (mediaFinal < 6 && frequencia < 30) {
                 totalAlunosReprovados++;
+
+            } else if (frequencia < 30) {
+                alunosReprovadosFrequecia++;
+                totalAlunosReprovados += alunosReprovadosFrequecia;
             }
+            porcentagemDeAlunosReprovados = (alunosReprovadosFrequecia * 100) / 2;
+
         }
         System.out.println("Maior média: " + maiorNota);
         System.out.println("Menor média: " + menorNota);
         System.out.println("Total de alunos reprovados: " + totalAlunosReprovados);
-
+        System.out.println("Alunos reprovados por falta: " + porcentagemDeAlunosReprovados + " %");
     }
 }
+
