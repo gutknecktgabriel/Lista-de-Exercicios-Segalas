@@ -52,6 +52,7 @@ public class Dificil_22 {
                     break;
             }
             desconto = valorDoCarro *(0.20);
+
             valorFinalCarroComDesconto = valorDoCarro - desconto;
         }
         System.out.println("Valor final do carro na quantidade de " + parcelas + " parcelas, ficou no valor de: " + valorFinalCarro + " reais");
