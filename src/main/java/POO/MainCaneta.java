@@ -1,6 +1,6 @@
 package POO;
 
-public class Criando_Classe_e_Objetos {
+public class MainCaneta {
     public static void main(String[] args) {
         //Criada uma caneta instanciada a partir da classe caneta
 
