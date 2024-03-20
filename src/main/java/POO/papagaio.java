@@ -1,9 +1,12 @@
 package POO;
 
-public class Sabia {
+public class papagaio {
     public static void main(String[] args) {
-        Ave sabia = new Ave();
-        String resp = sabia.canto(" cantando..." + sabia.voar(" para a fêmea"));
-        System.out.println(resp);
+        Passaro papagaio = new Passaro();
+        String direcao = papagaio.voar(" ao norte");
+        String imitacao = papagaio.canto(" para a fêmea");
+        System.out.println(direcao + imitacao);
+
     }
 }
+
