@@ -1,4 +1,6 @@
-package POO;
+package POO.Classes_e_Objetos;
+
+import POO.Interface.Terrestre;
 
 public class Cachorro implements Terrestre {
 

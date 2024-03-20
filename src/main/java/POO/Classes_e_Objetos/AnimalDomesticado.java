@@ -1,4 +1,6 @@
-package POO;
+package POO.Classes_e_Objetos;
+
+import POO.Classes_e_Objetos.Cachorro;
 
 public class AnimalDomesticado {
     public static void main(String[] args) {

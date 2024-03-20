@@ -1,4 +1,4 @@
-package POO;
+package POO.Classes_e_Objetos;
 
 public class campo {
     private char simbolo;
