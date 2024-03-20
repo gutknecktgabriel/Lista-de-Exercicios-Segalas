@@ -1,6 +1,6 @@
-package POO;
+package POO.Interface;
 
-public abstract class Conta implements Regras{
+public abstract class Conta implements Regras {
     String agencia;
     String conta;
     double saldo;

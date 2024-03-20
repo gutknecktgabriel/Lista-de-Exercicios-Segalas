@@ -1,4 +1,6 @@
-package POO;
+package POO.Interface;
+
+import POO.Interface.Passaro;
 
 public class papagaio {
     public static void main(String[] args) {

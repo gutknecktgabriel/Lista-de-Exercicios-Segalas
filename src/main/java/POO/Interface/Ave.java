@@ -1,4 +1,4 @@
-package POO;
+package POO.Interface;
 
 public interface Ave {
 

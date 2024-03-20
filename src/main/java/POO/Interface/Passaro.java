@@ -1,6 +1,8 @@
-package POO;
+package POO.Interface;
 
-public class Passaro implements Ave{
+import POO.Interface.Ave;
+
+public class Passaro implements Ave {
 
 
     @Override
@@ -8,6 +10,6 @@ public class Passaro implements Ave{
         return "Voando..." + direcao;
     }
     public String canto(String musica){
-        return " e cantando" + musica;
+        return " cantando" + musica;
     }
 }

@@ -1,6 +1,8 @@
-package POO;
+package POO.Interface;
 
-public class Poupanca extends Conta{
+import POO.Interface.Conta;
+
+public class Poupanca extends Conta {
     private int aniversario;
 
     public Poupanca(String a, String c, int an){

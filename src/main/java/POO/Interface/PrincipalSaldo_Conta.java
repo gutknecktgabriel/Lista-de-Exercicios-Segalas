@@ -1,4 +1,4 @@
-package POO;
+package POO.Interface;
 
 public class PrincipalSaldo_Conta {
     public static void main(String[] args) {
