@@ -1,6 +1,6 @@
 package POO.Metodos;
 
-public class Veiculo {
+public class Carro {
 
     //atributos
     String marca;
