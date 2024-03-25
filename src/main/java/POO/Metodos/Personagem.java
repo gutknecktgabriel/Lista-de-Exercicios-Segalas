@@ -13,7 +13,7 @@ public class Personagem {
 
     int calcularDano() {
         Random gerador = new Random();
-        int dado20faces = gerador.nextInt(19);
+        int dado20faces = gerador.nextInt();
         int dano = forca + dado20faces;
         return dano;
     }
