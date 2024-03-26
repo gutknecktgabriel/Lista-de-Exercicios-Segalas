@@ -21,7 +21,7 @@ public class ExceptionErroNumero {
 
             resultado = num1 / num2;
 
-            System.out.println(resultado);
+            System.out.printf("Resultado: " + resultado);
 
 
         } catch (ArithmeticException e1) {
