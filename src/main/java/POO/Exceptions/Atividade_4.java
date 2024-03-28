@@ -13,10 +13,10 @@ public class Atividade_4 {
 
         try {
 
-        System.out.println("informe o primeiro número para efetuarmos o cálculo de divisão");
+        System.out.printf("informe o primeiro número para efetuarmos o cálculo de divisão: ");
         num_1 = scanner.nextInt();
 
-        System.out.println("Agora, informe o segundo");
+        System.out.printf("Agora, informe o segundo: ");
         num_2 = scanner.nextInt();
 
         resultado = num_1 / num_2;
@@ -31,8 +31,7 @@ public class Atividade_4 {
         }
         catch (InputMismatchException e){
             System.out.println("Impossivel informar letras na divisão");
-            e.printStackTrace();
-            scanner.next();
+
         }
         System.out.println("Fim do programa");
         scanner.close();
