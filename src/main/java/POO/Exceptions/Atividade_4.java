@@ -21,11 +21,18 @@ public class Atividade_4 {
 
         resultado = num_1 / num_2;
 
+        System.out.println(resultado);
+
+
         }catch (ArithmeticException e){
             System.out.println("Impossivel dividir por zero");
+            e.printStackTrace();
+            scanner.next();
         }
         catch (InputMismatchException e){
             System.out.println("Impossivel informar letras na divisão");
+            e.printStackTrace();
+            scanner.next();
         }
         System.out.println("Fim do programa");
         scanner.close();
