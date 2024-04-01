@@ -16,6 +16,8 @@ public class Atividade {
         }
         catch (ArrayIndexOutOfBoundsException e){
             System.out.println("Invalid position !");
+            e.printStackTrace();
+            scanner.next();
         }
         catch (InputMismatchException e){
             System.out.println("Input error !");
