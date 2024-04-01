@@ -1,19 +1,27 @@
 package POO.Exceptions;
 
-import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class File {
     public static void main(String[] args) {
-        criarNovoArquivo();
-    }
 
-    private static void criarNovoArquivo() {
-        java.io.File file = new java.io.File("arquivo\\teste.txt");
+        java.io.File file = new java.io.File("C:\\temp\\in.txt");
+        Scanner scanner = null;
         try {
-            boolean isCriado = file.createNewFile();
-            System.out.println("Arquivo criado " + isCriado);
-        } catch (IOException e) {
-            e.printStackTrace();
+            scanner = new Scanner(file);
+            while (scanner.hasNextLine()){
+                System.out.println(scanner.nextLine());
+            }
+        }
+        catch (FileNotFoundException e){
+            System.out.println("Error opening file " + e.getMessage());
+        }
+        finally {
+            if (null != scanner){
+                scanner.close();
+            }
+            System.out.println("Finally block executed");
         }
     }
 }
