@@ -3,7 +3,7 @@ package Exercicios.Exercicios_Logica_OO;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Exercicio_3 {
+public class Exercicio_Repeticao_3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
