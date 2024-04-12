@@ -1,4 +1,4 @@
-package Exercicios.Exercicios_Logica_OO;
+package Exercicios.Exercicios_Logica_OO.Repeticao;
 
 import java.util.Arrays;
 import java.util.Scanner;

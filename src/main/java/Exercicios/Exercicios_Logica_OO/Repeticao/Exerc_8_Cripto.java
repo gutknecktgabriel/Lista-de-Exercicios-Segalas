@@ -1,4 +1,4 @@
-package Exercicios.Exercicios_Logica_OO;
+package Exercicios.Exercicios_Logica_OO.Repeticao;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
