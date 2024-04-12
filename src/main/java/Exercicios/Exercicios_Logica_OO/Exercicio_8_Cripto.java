@@ -1,74 +1,48 @@
 package Exercicios.Exercicios_Logica_OO;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Exercicio_8_Cripto {
 
-
-    private static char[] alfabetoCripto = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-
     public static void main(String[] args) {
-
-
-        String textoUsuario1 = "gabz";
-        String resultCripto = criptografar(textoUsuario1);
-        String resultDescripto = descriptografar(resultCripto);
-
-
-        System.out.printf("Texto criptografado: ");
-        retornar(resultCripto);
-        System.out.printf("Texto descriptografado: ");
-        retornar(resultDescripto);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite a frase a ser criptografada: ");
+        String frase = sc.nextLine();
+        String criptografada = criptografar(frase);
+        System.out.println(criptografada);
+        String descriptograda = descriptografar(criptografada);
+        System.out.println(descriptograda);
     }
 
-    private static void retornar(String frases) {
-
-        System.out.println(frases);
-
-        System.out.println("\n");
-    }
-
-    private static String criptografar(String frases) {
-        char[] resultCripto = new char[frases.length()];
-
-        for (int i = 0; i < resultCripto.length; i++) {
-            for (int j = 0; j < alfabetoCripto.length; j++) {
-                if (frases.charAt(i) == alfabetoCripto[j]) {
-                    if (frases.charAt(i) == 'z') {
-                        resultCripto[i] = alfabetoCripto[0];
-                    } else {
-                        resultCripto[i] = alfabetoCripto[j + 1];
-                    }
-                }
+    private static String criptografar(String frase) {
+        byte[] letras = frase.getBytes(StandardCharsets.UTF_8);
+        for (int i = 0; i < frase.length(); i++) {
+            letras[i] = (byte) (letras[i] + 1);
+            if (letras[i] == 123) {
+                letras[i] = 97;
+            }
+            if (letras[i] == 33) {
+                letras[i] = 48;
             }
         }
-        return String.valueOf(resultCripto.toString());
+        String fraseCriptografada = new String(letras, StandardCharsets.UTF_8);
+        return fraseCriptografada;
     }
 
-    private static String descriptografar(String resultCripto) {
-        char[] descriptografada = new char[resultCripto.length()];
-        for (int i = 0; i < resultCripto.length(); i++) {
-            for (int j = 0; j < alfabetoCripto.length; j++) {
-                if (resultCripto.charAt(i) == (alfabetoCripto[j])) {
-                    descriptografada = validacaoCaracter(resultCripto, descriptografada);
-                }
+    private static String descriptografar(String frase) {
+        byte[] letras = frase.getBytes(StandardCharsets.UTF_8);
+        for (int i = 0; i < frase.length(); i++) {
+            letras[i] = (byte) (letras[i] - 1);
+            if (letras[i] == 96) {
+                letras[i] = 122;
+            }
+            if (letras[i] == 47) {
+                letras[i] = 32;
             }
         }
-        return String.valueOf(descriptografada.toString());
-    }
-
-    private static char[] validacaoCaracter(String validacaoDoA, char[] descriptografada) {
-        try {
-            for (int i = 0; i < alfabetoCripto.length; i++) {
-                if (validacaoDoA.charAt(i) == 'a') {
-                    descriptografada[i] = alfabetoCripto[0];
-                }
-            }
-        }
-        catch (IndexOutOfBoundsException e ){
-            System.out.println(e.getMessage());
-        }
-        return descriptografada;
+        String fraseDescriptografada = new String(letras, StandardCharsets.UTF_8);
+        return fraseDescriptografada;
     }
 }
 
