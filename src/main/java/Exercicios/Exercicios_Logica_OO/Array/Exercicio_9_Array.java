@@ -5,29 +5,37 @@ public class Exercicio_9_Array {
     int valorAtual;
     int valorMaximo;
     int posicaoAtual;
+    int valorTotal;
+    int caluloMedia = 0;
 
-    public void Exercicio_9_Array(int valorMaximo) {
+    public Exercicio_9_Array(int valorMaximo) {
+
 
         this.arrayDeInteiro = new int[valorMaximo];
-        this.valorAtual = 0;
-        this.posicaoAtual = arrayDeInteiro.length -1;
         this.valorMaximo = valorMaximo;
+        this.posicaoAtual = arrayDeInteiro.length - 1;
+        this.valorAtual = 0;
 
     }
 
     public boolean adicionar(int number) {
-        if (posicaoAtual > valorMaximo){
+        if (posicaoAtual > valorMaximo) {
             return false;
-        }
-        else {
+        } else {
             valorAtual = number;
             arrayDeInteiro[posicaoAtual] = valorAtual;
-            posicaoAtual --;
+            posicaoAtual--;
             return true;
         }
     }
-    public int calculoMedia(int caluloMedia){
 
-        return caluloMedia = valorAtual + valorMaximo / 2;
+    public int calculoMedia() {
+
+        for (int i = 0; i < arrayDeInteiro.length; i++) {
+            valorTotal += arrayDeInteiro[i];
+
+        }
+        caluloMedia = valorTotal / arrayDeInteiro.length;
+        return caluloMedia;
     }
 }
