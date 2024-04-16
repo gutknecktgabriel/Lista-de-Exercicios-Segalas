@@ -11,10 +11,10 @@ public class Exercicio_9_Controle {
 
         int tamanhoArray = 0;
         int valor = 0;
-        Exercicio_9_Array test = new Exercicio_9_Array(tamanhoArray);
 
         System.out.printf("Qual o tamanho do array que você deseja criar?");
         tamanhoArray = scanner.nextInt();
+        Exercicio_9_Array test = new Exercicio_9_Array(tamanhoArray);
 
 
         for (int i = 0; i < tamanhoArray; i++) {
