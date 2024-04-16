@@ -11,7 +11,7 @@ public class Exerci_10_Controle {
 
         System.out.printf("Qual o tamanho do array que você deseja criar? ");
         tamanhoArrayList = scanner.nextInt();
-        Exerc_10 test = new Exerc_10(tamanhoArrayList);
+        Exerc_10_Array test = new Exerc_10_Array(tamanhoArrayList);
 
 
         for (int i = 0; i < tamanhoArrayList; i++) {
