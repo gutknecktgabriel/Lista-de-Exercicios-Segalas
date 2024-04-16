@@ -2,7 +2,7 @@ package Exercicios.Exercicios_Logica_OO.Array;
 
 import java.util.ArrayList;
 
-public class Exerc_10 {
+public class Exerc_10_Array {
     private ArrayList<Integer> valores;
     private int valorAtual;
     private int posicaoAtual;
@@ -11,7 +11,7 @@ public class Exerc_10 {
     private int calculoMedia;
 
 
-    public Exerc_10(int valorMaximo) {
+    public Exerc_10_Array(int valorMaximo) {
 
         this.valores = new ArrayList<>(valorMaximo);
         this.valorMaximo = valorMaximo;
