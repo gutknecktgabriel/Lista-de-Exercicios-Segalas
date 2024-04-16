@@ -4,23 +4,21 @@ import java.util.ArrayList;
 
 public class Exerc_10 {
     private ArrayList<Integer> valores;
+    private int valorAtual;
     private int posicaoAtual;
     private int valorMaximo;
-    private int valorAtual;
     private int valorTotal;
-    private int calculoMedia = 0;
+    private int calculoMedia;
 
 
     public Exerc_10(int valorMaximo) {
 
-        this.valores = new ArrayList<>();
+        this.valores = new ArrayList<>(valorMaximo);
         this.valorMaximo = valorMaximo;
-        this.posicaoAtual = valores.toArray().length;
+        this.posicaoAtual = valores.toArray().length -1;
         this.valorAtual = 0;
     }
-
     public boolean adicionar(int number) {
-
         if (posicaoAtual > valorMaximo) {
             return false;
         } else {
@@ -36,7 +34,7 @@ public class Exerc_10 {
             valorTotal += valores.get(i);
 
         }
-        calculoMedia = valorTotal / valores.length;
+        calculoMedia = (valorTotal / valores.toArray().length);
         return calculoMedia;
     }
 }
