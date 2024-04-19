@@ -31,9 +31,13 @@ public class Exerc_13 {
                 } catch (ValorBaixoException e) {
                     e.getMessage();
                 }
-            } else {
-                System.out.println("Valor muito alto, tente um valor menor.");
-                tentativas++;
+                try {
+                     if(chute > numeroSecreto){
+                        tentativas++;
+                    }
+                }catch (ValorAltoException e){
+                    e.getMessage();
+                }
             }
         }
     }
