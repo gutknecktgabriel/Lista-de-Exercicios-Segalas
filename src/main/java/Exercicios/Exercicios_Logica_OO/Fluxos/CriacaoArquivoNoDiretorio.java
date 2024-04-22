@@ -1,4 +1,4 @@
-package Exercicios.Exercicios_Logica_OO.Repeticao;
+package Exercicios.Exercicios_Logica_OO.Fluxos;
 
 import Exercicios.Exercicios_Logica_OO.Fluxos.Criacao_Diretorio;
 
