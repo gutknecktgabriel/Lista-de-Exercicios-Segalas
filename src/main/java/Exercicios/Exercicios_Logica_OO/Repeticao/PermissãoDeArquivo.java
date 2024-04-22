@@ -1,4 +1,4 @@
-package Exercicios.Exercicios_Logica_OO.Fluxos;
+package Exercicios.Exercicios_Logica_OO.Repeticao;
 
 import java.io.File;
 
