@@ -9,7 +9,7 @@ public class Manipulando_Arquivo_Binario {
     public static void main(String[] args) throws Exception {
 
             String pathIn = "C:\\Users\\gabriel.gutkneckt\\IdeaProjects\\SegalasExercicio\\src\\2014-11-14-java-logo.webp";
-            String pathOut = "C:\\Users\\gabriel.gutkneckt\\IdeaProjects\\SegalasExercicio\\src\\2014-11-14-java-logo.webp-2.jpg";
+            String pathOut = "C:\\Users\\gabriel.gutkneckt\\IdeaProjects\\SegalasExercicio\\src\\2014-11-14-java-logo.webp-2.txt";
 
             int read = 0;
             byte[] length = new byte[1024];
