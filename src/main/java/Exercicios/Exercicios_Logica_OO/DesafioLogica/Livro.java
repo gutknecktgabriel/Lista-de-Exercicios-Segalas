@@ -6,7 +6,11 @@ public class Livro {
     String autor;
     int anoPublicacao;
 
-    public Livro(String codLivro) {
+    public Livro() {
+        
+    }
+
+    public Livro(String codLivro, String tituloLivro, String autor, int anoPublicacao) {
         this.codLivro = codLivro;
         this.tituloLivro = tituloLivro;
         this.autor = autor;
@@ -14,7 +18,6 @@ public class Livro {
     }
 
     public String getCodLivro() {
-
         return codLivro;
     }
 
@@ -52,8 +55,6 @@ public class Livro {
         System.out.println("Autor do livro: " + autor);
         System.out.println("Ano de publicação: " + anoPublicacao);
     }
-
-
 }
 
 
