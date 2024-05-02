@@ -6,15 +6,14 @@ public class Livro {
     String autor;
     int anoPublicacao;
 
-    public Livro() {
-        
-    }
-
     public Livro(String codLivro, String tituloLivro, String autor, int anoPublicacao) {
         this.codLivro = codLivro;
         this.tituloLivro = tituloLivro;
         this.autor = autor;
         this.anoPublicacao = anoPublicacao;
+    }
+
+    public Livro() {
     }
 
     public String getCodLivro() {
