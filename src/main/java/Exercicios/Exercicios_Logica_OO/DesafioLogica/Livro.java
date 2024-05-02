@@ -53,13 +53,7 @@ public class Livro {
         System.out.println("Ano de publicação: " + anoPublicacao);
     }
 
-    public String buscarLivro(String codLivro) throws LivroNaoEncontradoException {
-        String livro = codLivro;
-        if (livro == null) {
-            throw new LivroNaoEncontradoException();
-        }
-        return livro;
-    }
+
 }
 
 
