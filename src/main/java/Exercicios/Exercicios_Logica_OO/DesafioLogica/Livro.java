@@ -6,7 +6,7 @@ public class Livro {
     String autor;
     int anoPublicacao;
 
-    public Livro(String codLivro, String tituloLivro, String autor, int anoPublicacao) {
+    public Livro(String codLivro) {
         this.codLivro = codLivro;
         this.tituloLivro = tituloLivro;
         this.autor = autor;
@@ -14,6 +14,7 @@ public class Livro {
     }
 
     public String getCodLivro() {
+
         return codLivro;
     }
 
@@ -44,11 +45,21 @@ public class Livro {
     public void setAnoPublicacao(int anoPublicacao) {
         this.anoPublicacao = anoPublicacao;
     }
-    public void exibirInformacoes(){
-        System.out.println("Autor do livro: " + autor);
-        System.out.println("Titulo do livro: " + tituloLivro);
-        System.out.println("Ano de publicação: " + anoPublicacao);
+
+    public void exibirInfo() {
         System.out.println("Código do livro: " + codLivro);
+        System.out.println("Titulo do livro: " + tituloLivro);
+        System.out.println("Autor do livro: " + autor);
+        System.out.println("Ano de publicação: " + anoPublicacao);
+    }
+
+    public String buscarLivro(String codLivro) throws LivroNaoEncontradoException {
+        String livro = codLivro;
+        if (livro == null) {
+            throw new LivroNaoEncontradoException();
+        }
+        return livro;
     }
 }
+
 
