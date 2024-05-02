@@ -4,19 +4,15 @@ import java.util.HashMap;
 
 public class BookRepository {
 
-    HashMap<String, Livro> livro = new HashMap<String, Livro>();
+    HashMap<String, Livro> livros;
+
+    public BookRepository() {
+        livros = new HashMap<>();
+    }
 
     //Metodo para adicionar livros usando o codigo como chave
 
     public void addBook(Livro livro) {
-        try {
-            if (livro.getCodLivro() != null) {
-                System.out.println(livro.getCodLivro().contains(livro.codLivro));
-
-            }
-        } catch (LivroNaoEncontradoException e) {
-            return;
-        }
-
+        livros.put(livro.getCodLivro(), livro);
     }
 }
