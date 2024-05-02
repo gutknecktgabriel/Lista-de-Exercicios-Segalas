@@ -16,10 +16,10 @@ public class BookRepository {
     }
     //Buscar livro por codigo
     public String searchLivrobyCode(String codLivro) throws LivroNaoEncontradoException {
-        String livro = codLivro;
-        if (livro == null) {
+        livros.containsKey(codLivro);
+        if (codLivro == null) {
             throw new LivroNaoEncontradoException();
         }
-        return livro;
+        return codLivro;
     }
 }
