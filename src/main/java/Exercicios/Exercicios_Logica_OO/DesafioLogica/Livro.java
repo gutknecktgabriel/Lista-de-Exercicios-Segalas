@@ -12,6 +12,12 @@ public class Livro {
         this.autor = autor;
         this.anoPublicacao = anoPublicacao;
     }
+    public void exibirInfo() {
+        System.out.println("Código do livro: " + codLivro);
+        System.out.println("Titulo do livro: " + tituloLivro);
+        System.out.println("Autor do livro: " + autor);
+        System.out.println("Ano de publicação: " + anoPublicacao);
+    }
 
     public Livro() {
     }
@@ -46,13 +52,6 @@ public class Livro {
 
     public void setAnoPublicacao(int anoPublicacao) {
         this.anoPublicacao = anoPublicacao;
-    }
-
-    public void exibirInfo() {
-        System.out.println("Código do livro: " + codLivro);
-        System.out.println("Titulo do livro: " + tituloLivro);
-        System.out.println("Autor do livro: " + autor);
-        System.out.println("Ano de publicação: " + anoPublicacao);
     }
 }
 
