@@ -1,4 +1,4 @@
-package CadastroContatos.Model;
+package CadastroClientes.Model;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -62,4 +62,3 @@ public class Contact {
         return Objects.hash(id);
     }
 }
-

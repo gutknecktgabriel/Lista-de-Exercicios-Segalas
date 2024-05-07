@@ -1,7 +1,7 @@
-package CadastroContatos.Controller;
+package CadastroClientes.Controller;
 
-import CadastroContatos.Model.Contact;
-import CadastroContatos.Model.ContactRepository;
+import CadastroClientes.Model.Contact;
+import CadastroClientes.Model.ContactRepository;
 
 import java.util.List;
 import java.util.UUID;

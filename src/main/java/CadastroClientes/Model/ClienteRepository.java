@@ -1,55 +1,55 @@
-package CadastroContatos.Model;
+package CadastroClientes.Model;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
-public class ContactRepository {
+public class ClienteRepository {
 
-    private List<Contact> records = new ArrayList<>();
+    private List<Cliente> records = new ArrayList<>();
 
-    public List<Contact> findAll(){
+    public List<Cliente> findAll(){
         return Collections.unmodifiableList(records);
     }
 
-    public Contact findById(UUID id){
-        Contact result = null;
-        for(Contact contact: records){
-            if(id.equals(contact.getId())){
-                result = contact;
+    public Cliente findById(UUID id){
+        Cliente result = null;
+        for(Cliente cliente: records){
+            if(id.equals(cliente.getId())){
+                result = cliente;
                 break;
             }
         }
         return result;
     }
 
-    public List<Contact> findByName(String name){
-        List<Contact> result = new ArrayList<>();
-        for(Contact contact: records){
-            if(contact.getName().toLowerCase().startsWith(name.toLowerCase())){
-                result.add(contact);
+    public List<Cliente> findByName(String name){
+        List<Cliente> result = new ArrayList<>();
+        for(Cliente cliente: records){
+            if(cliente.getName().toLowerCase().startsWith(name.toLowerCase())){
+                result.add(cliente);
             }
         }
         return Collections.unmodifiableList(result);
     }
 
 
-    public boolean insert(Contact contact){
+    public boolean insert(Cliente cliente){
         boolean result = false;
-        if(contact != null){
-            contact.setId(UUID.randomUUID());
-            result = records.add(contact);
+        if(cliente != null){
+            cliente.setId(UUID.randomUUID());
+            result = records.add(cliente);
         }
         return result;
     }
 
-    public boolean update(Contact contact){
+    public boolean update(Cliente contact){
         boolean result = false;
         //verificar qual é a posição que existe o elemento com o mesmo id
         int position = -1;
         for(int index = 0; index < records.size(); index++){
-            Contact current = records.get(index);
+            Cliente current = records.get(index);
             if(current.getId().equals(contact.getId())){
                 position = index;
                 break;
@@ -68,7 +68,7 @@ public class ContactRepository {
         //verificar qual é a posição que existe o elemento com o mesmo id
         int position = -1;
         for(int index = 0; index < records.size(); index++){
-            Contact current = records.get(index);
+            Cliente current = records.get(index);
             if(id.equals(current.getId())){
                 position = index;
                 break;
