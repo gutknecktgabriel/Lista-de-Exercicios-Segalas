@@ -1,7 +1,7 @@
-package CadastroContatos.cmd;
+package CadastroClientes.cmd;
 
 
-import CadastroContatos.View.ContactView;
+import CadastroClientes.View.ClienteView;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ public class ContactApp {
 
     public static void main(String[] args) {
         Scanner terminal = new Scanner(System.in);
-        ContactView view = new ContactView();
+        ClienteView view = new ClienteView();
         view.showMenu(terminal);
     }
 }
