@@ -2,10 +2,10 @@ package CadastroClientes.Model;
 import java.util.Objects;
 import java.util.UUID;
 
-public class Contact {
+public class Cliente {
     private UUID id;
     private String name;
-    private String email;
+    private String cpf;
     private String phone;
 
     public UUID getId(){
@@ -24,12 +24,12 @@ public class Contact {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getPhone() {
@@ -42,10 +42,10 @@ public class Contact {
 
     @Override
     public String toString() {
-        return "Contact{" +
+        return "Cliente{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
+                ", cpf='" + cpf + '\'' +
                 ", phone='" + phone + '\'' +
                 '}';
     }
@@ -53,8 +53,8 @@ public class Contact {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Contact contact)) return false;
-        return Objects.equals(id, contact.id);
+        if (!(o instanceof Cliente cliente)) return false;
+        return Objects.equals(id, cliente.id);
     }
 
     @Override
