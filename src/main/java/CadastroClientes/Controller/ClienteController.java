@@ -1,43 +1,43 @@
 package CadastroClientes.Controller;
 
-import CadastroClientes.Model.Contact;
-import CadastroClientes.Model.ContactRepository;
+import CadastroClientes.Model.Cliente;
+import CadastroClientes.Model.ClienteRepository;
 
 import java.util.List;
 import java.util.UUID;
 
-public class ContactController {
+public class ClienteController {
 
-    private ContactRepository repository = new ContactRepository();
+    private ClienteRepository repository = new ClienteRepository();
 
-    public boolean createContact(String name, String email, String phone){
-        Contact newContact = new Contact();
-        newContact.setName(name);
-        newContact.setEmail(email);
-        newContact.setPhone(phone);
-        return repository.insert(newContact);
+    public boolean createContact(String name, String cpf, String phone){
+        Cliente newCliente = new Cliente();
+        newCliente.setName(name);
+        newCliente.setCpf(cpf);
+        newCliente.setPhone(phone);
+        return repository.insert(newCliente);
     }
 
-    public List<Contact> loadAll(){
+    public List<Cliente> loadAll(){
         return repository.findAll();
     }
 
-    public List<Contact> searchContacts(String name){
+    public List<Cliente> searchClientes(String name){
         return repository.findByName(name);
     }
 
-    public boolean updateContact(String id, String name, String email, String phone){
-        Contact contact = repository.findById(UUID.fromString(id));
-        if(contact == null){
+    public boolean updateClientes(String id, String name, String cpf, String phone){
+        Cliente cliente = repository.findById(UUID.fromString(id));
+        if(cliente == null){
             return false;
         }
-        contact.setName(name);
-        contact.setEmail(email);
-        contact.setPhone(phone);
-        return repository.update(contact);
+        cliente.setName(name);
+        cliente.setCpf(cpf);
+        cliente.setPhone(phone);
+        return repository.update(cliente);
     }
 
-    public boolean removeContact(String id){
+    public boolean removeCliente(String id){
         return repository.remove(UUID.fromString(id));
     }
 }
