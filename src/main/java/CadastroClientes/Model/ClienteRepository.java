@@ -44,13 +44,13 @@ public class ClienteRepository {
         return result;
     }
 
-    public boolean update(Cliente contact){
+    public boolean update(Cliente cliente){
         boolean result = false;
         //verificar qual é a posição que existe o elemento com o mesmo id
         int position = -1;
         for(int index = 0; index < records.size(); index++){
             Cliente current = records.get(index);
-            if(current.getId().equals(contact.getId())){
+            if(current.getId().equals(cliente.getId())){
                 position = index;
                 break;
             }
@@ -58,7 +58,7 @@ public class ClienteRepository {
         //preciso trocar o elemento
         if(position > -1){
             result = true;
-            records.set(position,contact);
+            records.set(position,cliente);
         }
         return result;
     }
