@@ -1,19 +1,18 @@
 package Exercicios.Exercicios_Logica_OO.Basico;
 
 public class Departamento {
-    String nomeApartamento;
+    String nomeDepartamento;
     Universidade universidade;
 
-    public Departamento(String nomeApartamento) {
-        this.nomeApartamento = nomeApartamento;
+    public Departamento(String nomeDepartamento) {
+        this.nomeDepartamento = nomeDepartamento;
     }
 
-    public String getNomeApartamento() {
-        return nomeApartamento;
+    public String getNomeDepartamento() {
+        return nomeDepartamento;
     }
-
-    public void setNomeApartamento(String nomeApartamento) {
-        this.nomeApartamento = nomeApartamento;
+    public void setNomeDepartamento(String nomeDepartamento) {
+        this.nomeDepartamento = nomeDepartamento;
     }
     public Universidade getUniversidade() {
         return universidade;
