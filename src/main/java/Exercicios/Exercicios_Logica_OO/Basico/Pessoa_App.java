@@ -3,9 +3,11 @@ package Exercicios.Exercicios_Logica_OO.Basico;
 public class Pessoa_App {
     public static void main(String[] args) {
         Universidade universidade = new Universidade("Princeton");
-        Pessoa albert = new Pessoa(0, 14,3,1879,"Albert",universidade);
+        Departamento departamento = new Departamento("Seguraça");
+        Pessoa albert = new Pessoa(0, 14,3,1879,"Albert",universidade, departamento);
         Universidade universidade2 = new Universidade("Cambridge");
-        Pessoa isaac = new Pessoa(0, 4,1,1643, " ", universidade2);
+        Departamento departamento2 = new Departamento("Contabilidade");
+        Pessoa isaac = new Pessoa(0, 4,1,1643, " ", universidade2,departamento2);
 
          int diaAtual = 8;
          int mesAtual = 5;
@@ -19,5 +21,9 @@ public class Pessoa_App {
         System.out.println("Albert Einstein professor em " + universidade.getNome());
         System.out.println("Isaac Newton professor em " + universidade2.getNome());
         System.out.println(albert.retornaUniversadeEPessoa());
+        System.out.println(isaac.retornaUniversadeEPessoa());
+        System.out.println(albert.retornaDepartamentoEPessoa());
+        System.out.println(isaac.retornaDepartamentoEPessoa());
+
     }
 }
