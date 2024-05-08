@@ -10,6 +10,16 @@ public class Pessoa {
     private int mesNasc;
     private int anoNasc;
     String nome;
+    Universidade universidade;
+
+    public Pessoa(int idade, int diaNasc, int mesNasc, int anoNasc, String nome, Universidade universidade) {
+        this.idade = idade;
+        this.diaNasc = diaNasc;
+        this.mesNasc = mesNasc;
+        this.anoNasc = anoNasc;
+        this.nome = nome;
+        this.universidade = universidade;
+    }
 
     public Pessoa(int idade, int diaNasc, int mesNasc, int anoNasc) {
         this.idade = idade;
@@ -23,7 +33,7 @@ public class Pessoa {
         LocalDate dataNascimento = LocalDate.of(anoNasc, mesNasc, diaNasc);
         LocalDate dataAtual = LocalDate.of(anoAtual, mesAtual, diaAtual);
         Period periodo = Period.between(dataNascimento, dataAtual); //calcula a duração das datas, desde a data de nascimento ate a data atual
-        this.idade = periodo.getYears();    //pega idade da pessoa em anos
+        this.idade = periodo.getYears();    //pega idade da pessoa em anos atraves do periodo
     }
 
     public int informaIdade() {
@@ -31,10 +41,10 @@ public class Pessoa {
     }
 
     public String informaNome() {
-        return nome;
-    }
+     return nome;
+     }
 
-    public void ajustarDataNascimento(int dia, int mes, int ano) {
+    public Pessoa(int dia, int mes, int ano) {
         this.diaNasc = dia;
         this.mesNasc = mes;
         this.anoNasc = ano;
@@ -78,5 +88,17 @@ public class Pessoa {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public Universidade getUniversidade() {
+        return universidade;
+    }
+
+    public void setUniversidade(Universidade universidade) {
+        this.universidade = universidade;
+    }
+
+    public String retornaUniversadeEPessoa(){
+        return "A pessoa tal " + this.getNome() + " estudou na universidade tal " + this.getUniversidade().getNome();
     }
 }
