@@ -1,4 +1,4 @@
-package main.java.Exercicios.Exercicios_Logica_OO.Basico;
+package Exercicios.Exercicios_Logica_OO.Basico;
 
 import java.util.Scanner;
 
@@ -33,8 +33,8 @@ public class Pessoa_Program {
 
 
         //Talvez será usado com o scanner para o usuário escolher seu setor da Universidade
-//        System.out.println(albert.retornaDepartamentoEPessoa());
-//        System.out.println(isaac.retornaDepartamentoEPessoa());
+        //System.out.println(albert.retornaDepartamentoEPessoa());
+        //System.out.println(isaac.retornaDepartamentoEPessoa());
 
     }
 }
