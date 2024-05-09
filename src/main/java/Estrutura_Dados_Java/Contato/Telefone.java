@@ -1,16 +1,16 @@
 package Estrutura_Dados_Java.Contato;
 
 public class Telefone {
-    private String tipo;
-    private String ddd;
     private String numero;
+    private String ddd;
+    private String tipo;
 
-    public String getTipo() {
-        return tipo;
+    public String getNumero() {
+        return numero;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 
     public String getDdd() {
@@ -21,11 +21,11 @@ public class Telefone {
         this.ddd = ddd;
     }
 
-    public String getNumero() {
-        return numero;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setNumero(String numero) {
-        this.numero = numero;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }
