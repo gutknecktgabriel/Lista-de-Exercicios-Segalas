@@ -2,8 +2,16 @@ package Estrutura_Dados_Java.Contato;
 
 public class Contato {
     private String nome;
-    private String endereco;
-    private String telefone;
+    private Endereco endereco;
+    private Telefone telefone;
+
+    public Telefone getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(Telefone telefone) {
+        this.telefone = telefone;
+    }
 
     public String getNome() {
         return nome;
@@ -13,19 +21,11 @@ public class Contato {
         this.nome = nome;
     }
 
-    public String getEndereco() {
+    public Endereco getEndereco() {
         return endereco;
     }
 
-    public void setEndereco(String endereco) {
+    public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
     }
 }
