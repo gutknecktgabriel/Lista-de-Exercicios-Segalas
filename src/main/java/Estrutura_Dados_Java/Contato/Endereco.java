@@ -2,10 +2,11 @@ package Estrutura_Dados_Java.Contato;
 
 public class Endereco {
     private String nomeRua;
-    private String numero;
-    private String complemento;
+    private String numeroCasa;
+    private String bairro;
     private String cep;
     private String cidade;
+    private String estado;
 
     public String getNomeRua() {
         return nomeRua;
@@ -15,20 +16,20 @@ public class Endereco {
         this.nomeRua = nomeRua;
     }
 
-    public String getNumero() {
-        return numero;
+    public String getNumeroCasa() {
+        return numeroCasa;
     }
 
-    public void setNumero(String numero) {
-        this.numero = numero;
+    public void setNumeroCasa(String numeroCasa) {
+        this.numeroCasa = numeroCasa;
     }
 
-    public String getComplemento() {
-        return complemento;
+    public String getBairro() {
+        return bairro;
     }
 
-    public void setComplemento(String complemento) {
-        this.complemento = complemento;
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
     }
 
     public String getCep() {
@@ -54,6 +55,4 @@ public class Endereco {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-
-    private String estado;
 }
