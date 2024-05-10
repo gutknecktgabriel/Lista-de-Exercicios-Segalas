@@ -1,4 +1,4 @@
-package Exercicios.Exercicios_Logica_OO.Basico;
+package Exercicios.Exercicios_Logica_OO.Ex1_Ate_04;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -11,6 +11,15 @@ public class Pessoa {
     private int anoNasc;
     String nome;
     Universidade universidade;
+    Departamento departamento;
+
+    public Departamento getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(Departamento departamento) {
+        this.departamento = departamento;
+    }
 
     public Pessoa(int idade, int diaNasc, int mesNasc, int anoNasc, String nome, Universidade universidade) {
         this.idade = idade;
@@ -26,7 +35,6 @@ public class Pessoa {
         this.diaNasc = diaNasc;
         this.mesNasc = mesNasc;
         this.anoNasc = anoNasc;
-        this.nome = nome;
     }
 
     public void calculaIdade(int diaAtual, int mesAtual, int anoAtual) {
@@ -41,8 +49,8 @@ public class Pessoa {
     }
 
     public String informaNome() {
-     return nome;
-     }
+        return nome;
+    }
 
     public Pessoa(int dia, int mes, int ano) {
         this.diaNasc = dia;
@@ -60,45 +68,55 @@ public class Pessoa {
 
     public int getDiaNasc() {
         return diaNasc;
+
     }
 
     public void setDiaNasc(int diaNasc) {
         this.diaNasc = diaNasc;
+
     }
 
     public int getMesNasc() {
         return mesNasc;
+
     }
 
     public void setMesNasc(int mesNasc) {
         this.mesNasc = mesNasc;
+
     }
 
     public int getAnoNasc() {
         return anoNasc;
+
     }
 
     public void setAnoNasc(int anoNasc) {
         this.anoNasc = anoNasc;
+
     }
 
     public String getNome() {
         return nome;
+
     }
 
     public void setNome(String nome) {
         this.nome = nome;
+
     }
 
     public Universidade getUniversidade() {
         return universidade;
+
     }
 
     public void setUniversidade(Universidade universidade) {
         this.universidade = universidade;
+
     }
 
-    public String retornaUniversadeEPessoa(){
-        return "A pessoa tal " + this.getNome() + " estudou na universidade tal " + this.getUniversidade().getNome();
+    public String retornaUniversadeEPessoa() {
+        return "O físico " + getNome() + " estudou na universidade de " + getUniversidade().getNome();
     }
 }
