@@ -28,6 +28,9 @@ public class Pessoa_Program {
         Departamento controleDeQualiade = new Departamento("Controle de Qualidade");
         Departamento compras = new Departamento("Compras");
 
+        albert.setDepartamento(juridico);
+        isaac.setDepartamento(tecnlogia);
+
         universidade.add(juridico);
         universidade.add(contabilidade);
         universidade.add(tecnlogia);
@@ -35,7 +38,17 @@ public class Pessoa_Program {
         universidade2.add(controleDeQualiade);
         universidade2.add(compras);
 
-
-
+        for (int i = 0; i < universidade.size(); i++) {
+            (universidade.get(i)).setUniversidade(universidade);
+        }
+        for (int i = 0; i < universidade2.size(); i++) {
+            (universidade2.get(i)).setUniversidade(universidade2);
+        }
+        if (universidade.size() > 50) {
+            throw new IndexOutOfBoundsException("Limite máximo de 50 departamentos atingido.");
+        }
+        if (universidade2.size() > 50){
+            throw new IndexOutOfBoundsException("Limite máximo de 50 departamentos atingido.");
+        }
     }
 }
