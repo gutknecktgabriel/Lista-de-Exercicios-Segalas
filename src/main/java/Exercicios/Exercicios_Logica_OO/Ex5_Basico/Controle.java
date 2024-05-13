@@ -16,10 +16,11 @@ public class Controle {
         int qntAlunos = 0;
 
         ArrayList<Aluno> alunos = new ArrayList<>();
+        ArrayList<Integer> codigoAlunosReprovados = new ArrayList<>();
+
 
         while (true) {
             Aluno aluno = new Aluno();
-
             System.out.println("Informe o nome do aluno ou digite 'fim' para encerrar o programa.");
             aluno.setNomeAluno(scanner.next());
 
@@ -50,27 +51,31 @@ public class Controle {
 
             if (mediaAlunos < 60) {
                 alunosReprovados++;
+                codigoAlunosReprovados.add(codigoAluno);
+            }
+            if (mediaAlunos >95){
+                alunosFinal++;
             }
             else {
                 alunosAprovados++;
             }
-
+            if (mediaAlunos < 60){
+                alunosReprovados = codigoAluno;
+            }
             alunos.add(aluno);
             qntAlunos++;
         }
-
         double mediaTurma = 0;
         for (Aluno aluno : alunos) {
             mediaTurma += (aluno.getPrimeiraNotaParcial() + aluno.getSegundaNotaParcial()) / 2;
+
         }
         mediaTurma /= alunos.size();
-        if (mediaTurma < 60){
-            codigoAluno;
-        }
+
 
         System.out.println("Media da turma: " + mediaTurma);
         System.out.println("Alunos aprovados: " + alunosAprovados);
-        System.out.println("Quantidade de alunos reprovados: " + alunosReprovados + " , código dos alunos reprovados: " + codigoAluno);
-        System.out.println("Alunos que foram para a final: " + alunosFinal);
+        System.out.println("Quantidade de alunos reprovados: " + alunosReprovados + " , código dos alunos reprovados: " + codigoAlunosReprovados);
+        System.out.println("Quantidade de alunos que foram para a final dentre todos: " + alunosFinal);
     }
 }
