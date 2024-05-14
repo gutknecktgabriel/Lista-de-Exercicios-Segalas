@@ -1,4 +1,4 @@
-package Exercicios.Dificil43;
+package Exercicios.ExercicioFluxoRepeticao.Dificil43;
 
 import java.util.Scanner;
 
