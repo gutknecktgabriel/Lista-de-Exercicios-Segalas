@@ -1,6 +1,4 @@
-package Exercicios.Intermediario43;
-
-import org.w3c.dom.ls.LSOutput;
+package Exercicios.ExercicioFluxoRepeticao.Intermediario43;
 
 import java.util.Scanner;
 

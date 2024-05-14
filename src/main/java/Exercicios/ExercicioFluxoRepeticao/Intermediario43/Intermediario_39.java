@@ -1,4 +1,4 @@
-package Exercicios.Intermediario43;
+package Exercicios.ExercicioFluxoRepeticao.Intermediario43;
 
 import javax.imageio.metadata.IIOMetadataFormatImpl;
 import java.util.Scanner;

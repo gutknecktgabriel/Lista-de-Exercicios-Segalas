@@ -3,7 +3,7 @@
 // (powered by FernFlower decompiler)
 //
 
-package Teste;
+package Exercicios.ExercicioFluxoRepeticao.Intermediario43;
 
 import java.util.Scanner;
 
