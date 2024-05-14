@@ -5,27 +5,27 @@ public class CalcDados {
     private double valor2;
     private char operador;
 
-    public double getValor1() {
+    public double getOperando1() {
         return valor1;
     }
 
-    public void setValor1(double valor1) {
+    public void setOperando1(double valor1) {
         this.valor1 = valor1;
     }
 
-    public double getValor2() {
+    public double getOperando2() {
         return valor2;
     }
 
-    public void setValor2(double valor2) {
+    public void setOperando2(double valor2) {
         this.valor2 = valor2;
     }
 
-    public char getOperador() {
+    public char getOperacao() {
         return operador;
     }
 
-    public void setOperador(char operador) {
+    public void setOperacao(char operador) {
         this.operador = operador;
     }
 }
