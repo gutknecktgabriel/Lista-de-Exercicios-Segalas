@@ -2,23 +2,6 @@ package Exercicios.Exercicios_Logica_OO.Heranca_Polimofirmos;
 
 public class PolReg {
     private int numeroLados;
-
-    public int getNumeroLados() {
-        return numeroLados;
-    }
-
-    public void setNumeroLados(int numeroLados) {
-        this.numeroLados = numeroLados;
-    }
-
-    public int getTamanhoDoLado() {
-        return tamanhoDoLado;
-    }
-
-    public void setTamanhoDoLado(int tamanhoDoLado) {
-        this.tamanhoDoLado = tamanhoDoLado;
-    }
-
     private int tamanhoDoLado;
 
     public PolReg(int numeroLados, int tamanhoDoLado) {
