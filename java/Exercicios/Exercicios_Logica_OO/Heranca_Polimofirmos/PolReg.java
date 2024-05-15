@@ -12,8 +12,7 @@ public class PolReg {
     public int calculoPerimetro() {
         int resultado = 0;
 
-        resultado = tamanhoDoLado * numeroLados;
-        return resultado;
+        return tamanhoDoLado * numeroLados;
     }
 
     public int calculaAngulo() {
@@ -21,7 +20,10 @@ public class PolReg {
         int totalAngulo = 0;
 
         totalAngulo = (numeroLados - 2) * 180;
-        resultado = totalAngulo / numeroLados;
-        return resultado;
+        return totalAngulo / numeroLados;
+    }
+
+    public int calculoArea(){
+        return 0;
     }
 }
