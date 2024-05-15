@@ -1,14 +1,15 @@
 package Exercicios.Exercicios_Logica_OO.Heranca_Polimofirmos;
 
-public class Triangulo extends PolReg{
-    public Triangulo(int numeroLados, int tamanhoDoLado) {
+public class TrianguloEq extends PolReg{
+    public TrianguloEq(int numeroLados, int tamanhoDoLado) {
         super(numeroLados, tamanhoDoLado);
-
     }
-    public String triangulo;
-
     @Override
     public int calculoArea() {
-        return calculoArea(triangulo);
+        int base = 0;
+        int altura = 0;
+        int area;
+        area = base * altura;
+        return area;
     }
 }
