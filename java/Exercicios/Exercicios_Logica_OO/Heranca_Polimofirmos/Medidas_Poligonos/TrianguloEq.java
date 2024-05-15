@@ -1,4 +1,4 @@
-package Exercicios.Exercicios_Logica_OO.Heranca_Polimofirmos;
+package Exercicios.Exercicios_Logica_OO.Heranca_Polimofirmos.Medidas_Poligonos;
 
 public class TrianguloEq extends PolReg{
     public TrianguloEq(int numeroLados, int tamanhoDoLado) {
