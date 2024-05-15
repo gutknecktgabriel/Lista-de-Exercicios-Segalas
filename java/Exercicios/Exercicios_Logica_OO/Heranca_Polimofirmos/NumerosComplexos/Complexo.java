@@ -2,19 +2,24 @@ package Exercicios.Exercicios_Logica_OO.Heranca_Polimofirmos.NumerosComplexos;
 
 public class Complexo {
     private float real;
-    private float imagiaria;
+    private float numeroImaginario;
 
-    public Complexo(float real, float imaginaria) {
+    public Complexo(float real, float numeroImaginario) {
         this.real = real;
-        this.imagiaria = imaginaria;
+        this.numeroImaginario = numeroImaginario;
     }
-    public int modulo(int numComplexo){
-        return numComplexo;
+
+    public float getReal() {
+        return real;
     }
-    public int angulo(){
-        int numComplexo = 0;
-        double angulo_radianos = Math.atan(numComplexo);
-        double angulo_graus = Math.toDegrees(angulo_radianos);
-        return (int) angulo_graus;
+
+    public float getImagiaria() {
+        return numeroImaginario;
+    }
+    public double modulo(){
+        return Math.sqrt(real * real + numeroImaginario * numeroImaginario);
+    }
+    public double angulo(){
+        return Math.toDegrees(Math.atan2(numeroImaginario, real));
     }
 }
