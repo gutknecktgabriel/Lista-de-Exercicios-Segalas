@@ -7,6 +7,7 @@ public class Aluno extends Pessoa{
         super(nome,idade);
         this.curso = curso;
     }
+
     public void mostrarDados(){
         System.out.println("Nome do aluno: " + nome);
         System.out.println("Idade do aluno: " + idade);
