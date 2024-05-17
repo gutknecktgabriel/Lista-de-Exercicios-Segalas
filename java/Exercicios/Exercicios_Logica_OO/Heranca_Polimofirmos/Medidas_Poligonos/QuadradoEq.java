@@ -1,15 +1,13 @@
 package Exercicios.Exercicios_Logica_OO.Heranca_Polimofirmos.Medidas_Poligonos;
 
-public class QuadradoEq extends  PolReg{
+public abstract class QuadradoEq extends  PolReg{
     public QuadradoEq(int numeroLados, int tamanhoDoLado) {
         super(numeroLados, tamanhoDoLado);
     }
 
-    @Override
-    public int calculoArea() {
+    public double calculoArea() {
         int area;
         int lado = 0;
-        area = lado * lado;
-        return area;
+        return area = lado * lado;
     }
 }
