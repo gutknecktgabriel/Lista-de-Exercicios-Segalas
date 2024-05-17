@@ -1,6 +1,6 @@
 package Exercicios.Exercicios_Logica_OO.Heranca_Polimofirmos.Medidas_Poligonos;
 
-public class PolReg {
+public abstract class PolReg {
     private int numeroLados;
     private int tamanhoDoLado;
 
@@ -21,13 +21,8 @@ public class PolReg {
 
         totalAngulo = (numeroLados - 2) * 180;
         return totalAngulo / numeroLados;
-    }
 
-    public int calculoArea(){
-        int base = 0;
-        int altura = 0;
-        int area; 
-        area = base * altura / 2;
-        return 0;
     }
+    public abstract double calcularArea();
 }
+
