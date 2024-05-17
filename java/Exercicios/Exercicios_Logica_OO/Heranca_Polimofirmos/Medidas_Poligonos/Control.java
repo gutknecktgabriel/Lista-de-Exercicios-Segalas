@@ -17,7 +17,12 @@ public class Control {
                 int numLados = scanner.nextInt();
                 System.out.println("Qual o tamanho dos lados?");
                 int tamanhoLadoRegular = scanner.nextInt();
-                PolReg regular = new QuadradoEq(numLados, tamanhoLadoRegular);
+                PolReg regular = new QuadradoEq(numLados, tamanhoLadoRegular) {
+                    @Override
+                    public double calcularArea() {
+                        return 0;
+                    }
+                };
 
                 System.out.println("Tamanho do perimetro: " + regular.calculoPerimetro());
                 System.out.println("Valor do ângulo interno: " + regular.calculaAngulo());
@@ -26,7 +31,12 @@ public class Control {
 
                 System.out.println("Qual o tamanho dos lados do triângulo?");
                 int tamanhoLadoTriangulo = scanner.nextInt();
-                PolReg triangulo = new TrianguloEq(3, tamanhoLadoTriangulo);
+                PolReg triangulo = new TrianguloEq(3, tamanhoLadoTriangulo) {
+                    @Override
+                    public double calcularArea() {
+                        return 0;
+                    }
+                };
 
                 System.out.println("Tamanho do perimetro: " + triangulo.calculoPerimetro());
                 System.out.println("Tamanho do ângulo interno: " + triangulo.calculaAngulo());
@@ -34,7 +44,12 @@ public class Control {
             case "quadrado":
                 System.out.println("Qual o tamanho dos lados do seu quadrado?");
                 int tamanhoLadoQuadrado = scanner.nextInt();
-                PolReg quadrado = new QuadradoEq(4, tamanhoLadoQuadrado);
+                PolReg quadrado = new QuadradoEq(4, tamanhoLadoQuadrado) {
+                    @Override
+                    public double calcularArea() {
+                        return 0;
+                    }
+                };
 
                 System.out.println("Tamanho do perimetro: " + quadrado.calculoPerimetro());
                 System.out.println("Tamanho do ângulo interno: " + quadrado.calculaAngulo());
