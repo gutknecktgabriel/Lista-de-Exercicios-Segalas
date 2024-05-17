@@ -26,7 +26,8 @@ public class Principal {
         }
         deleteCPF(empregados);
         System.out.println("Digite um CPF para remover da lista: ");
-
+        if(deleteCPF = empregado.getCPF){
+         ArrayList<Empregado>, remove;
         bubbleSort(empregados);
         System.out.println("Empregados ordenados pelo salário:");
 
