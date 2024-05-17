@@ -1,13 +1,14 @@
 package Exercicios.Exercicios_Logica_OO.Estrutura_Dados;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Empregado[] empregados = new Empregado[5];
+        ArrayList<Empregado> empregados = new ArrayList<>();
 
-        for (int i = 0; i < empregados.length; i++) {
+        for (int i = 0; i < 5; i++) {
             Empregado empregado = new Empregado("", "", 0);
 
             System.out.println("Informe o nome do empregado " + (i + 1) + " :");
@@ -19,15 +20,24 @@ public class Principal {
             System.out.println("Informe o salario do empregado " + (i + 1) + " :");
             empregado.setSalario(scanner.nextDouble());
             scanner.nextLine();
-            empregados[i] = new Empregado(empregado.getNome(), empregado.getCpf(), empregado.getSalario());
-        }
 
-            bubbleSort(empregados);
+            empregados.add(new Empregado(empregado.getNome(), empregado.getCpf(), empregado.getSalario()));
+
+        }
+        deleteCPF(empregados);
+        System.out.println("Digite um CPF para remover da lista: ");
+
+        bubbleSort(empregados);
         System.out.println("Empregados ordenados pelo salário:");
+
         for (Empregado empregado : empregados) {
             System.out.println(empregado);
         }
     }
-    private static void bubbleSort(Empregado[] empregados) {
+    private static void bubbleSort(ArrayList<Empregado> empregados) {
+    }
+    private static void deleteCPF(ArrayList<Empregado> empregados){
     }
 }
+
+
