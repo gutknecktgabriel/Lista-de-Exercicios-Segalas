@@ -1,4 +1,4 @@
-package Exercicios.Exercicios_Logica_OO.Estrutura_Dados;
+package Exercicios.Exercicios_Logica_OO.Estrutura_Dados.Ex_1;
 
 public class Empregado {
     private String nome;
