@@ -8,7 +8,7 @@ public class Principal {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Empregado> empregados = new ArrayList<>();
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 3; i++) {
             Empregado empregado = new Empregado("", "", 0);
 
             System.out.println("Informe o nome do empregado " + (i + 1) + " :");
@@ -24,11 +24,26 @@ public class Principal {
             empregados.add(new Empregado(empregado.getNome(), empregado.getCpf(), empregado.getSalario()));
 
         }
+
         deleteCPF(empregados);
         System.out.println("Digite um CPF para remover da lista: ");
+        String elementoParaRemover = scanner.next();
 
+        if (empregados.remove(elementoParaRemover == empregados.removeFirst().getCpf())){
+            System.out.println("CPF removido com sucesso");
+        }
+        else {
+            System.out.println("CPF não encontrado na lista");
+        }
+
+        System.out.println("Lista de empregados atualizado: ");
+        for (Empregado empregado : empregados) {
+            System.out.println(empregado);
+        }
+
+        System.out.println("----------------------------------------------------");
         bubbleSort(empregados);
-        System.out.println("Empregados ordenados pelo salário:");
+        System.out.println("Lista de empregados ordenados pelo salário:");
 
         for (Empregado empregado : empregados) {
             System.out.println(empregado);
