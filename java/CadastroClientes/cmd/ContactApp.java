@@ -12,5 +12,10 @@ public class ContactApp {
         ClienteView view = new ClienteView();
         view.showMenu(terminal);
 
+
+
+
+
+
     }
 }
