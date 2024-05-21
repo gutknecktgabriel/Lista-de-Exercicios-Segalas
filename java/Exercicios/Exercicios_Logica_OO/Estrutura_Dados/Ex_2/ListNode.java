@@ -21,8 +21,9 @@ public class ListNode<T> {
         return proximo;
     }
 
-    public void setProximo(ListNode proximo) {
+    public void setProximo() {
         this.proximo = proximo;
     }
 
 }
+
