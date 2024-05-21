@@ -1,24 +1,17 @@
 package Exercicios.Exercicios_Logica_OO.Estrutura_Dados.Ex_3;
 
-import java.util.ArrayList;
 
 public class Infixa {
-    private String infixa;
+    private String expressaoAritmetica;
 
-    public Infixa(String infixa) {
-        this.infixa = infixa;
+    public Infixa(String expressaoAritmetica) {
+        this.expressaoAritmetica = expressaoAritmetica;
+    }
+    public String getExpressaoAritmetica() {
+        return expressaoAritmetica;
     }
 
-    public String getInfixa() {
-        return infixa;
-    }
-
-    public void setInfixa(String infixa) {
-        this.infixa = infixa;
-    }
-    public void contaInfixa(){
-        ArrayList<String> simbolos = new ArrayList<>();
-
-        simbolos.add("a - b / c * d % e");
+    public void setExpressaoAritmetica(String expressaoAritmetica) {
+        this.expressaoAritmetica = expressaoAritmetica;
     }
 }
