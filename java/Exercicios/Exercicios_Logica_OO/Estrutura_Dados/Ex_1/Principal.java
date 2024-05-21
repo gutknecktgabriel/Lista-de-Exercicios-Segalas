@@ -33,7 +33,7 @@ public class Principal {
             System.out.println("CPF removido com sucesso");
         }
         else {
-            System.out.println("CPF não encontrado na lista");
+            System.out.println("CPF não se encontra na lista, verifique se o mesmo foi removido.");
         }
 
         System.out.println("Lista de empregados atualizado: ");
