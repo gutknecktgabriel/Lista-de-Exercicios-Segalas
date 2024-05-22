@@ -12,8 +12,19 @@ public class ListOperation<T> {
             ant.proximo = n;
         }
     }
-    public void remove(ListNode n){
 
+    public void remove(ListNode n) {
+        remove(n);
+    }
+
+    public void print() {
+        String result = " ";
+        ListNode<T> nome = null;
+        while (nome.proximo != null){
+            result += nome;
+        }
+        System.out.println(result);
     }
 }
+
 

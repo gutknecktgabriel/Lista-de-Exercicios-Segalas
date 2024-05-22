@@ -4,7 +4,7 @@ public class ListNode<T> {
     T nome;
     ListNode proximo;
 
-    public ListNode(T nome, ListNode proximo) {
+    public ListNode(T nome) {
         this.nome = nome;
         this.proximo = proximo;
     }
