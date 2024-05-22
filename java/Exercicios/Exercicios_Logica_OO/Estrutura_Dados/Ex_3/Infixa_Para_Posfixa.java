@@ -33,6 +33,7 @@ public class Infixa_Para_Posfixa<T> {
         valor = peek();
         tamanhoMax = tamanhoMax + 1;
         return valor;
+
     }
 
     public T pop() {
@@ -41,7 +42,8 @@ public class Infixa_Para_Posfixa<T> {
         tamanhoMax = tamanhoMax - 1;
         return valor;
     }
-    public int tamanhoMax(){
+
+    public int tamanhoMax() {
         return tamanhoMax;
     }
 }
