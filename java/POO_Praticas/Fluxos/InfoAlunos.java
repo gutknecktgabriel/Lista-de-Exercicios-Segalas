@@ -1,2 +1,2 @@
-package Exercicios.Exercicios_Logica_OO.Fluxos;public class InfoAlunos {
+package POO_Praticas.Fluxos;public class InfoAlunos {
 }

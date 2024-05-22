@@ -1,6 +1,4 @@
-package Exercicios.Exercicios_Logica_OO.Fluxos;
-
-import Exercicios.Exercicios_Logica_OO.Fluxos.Criacao_Diretorio;
+package POO_Praticas.Fluxos;
 
 import java.io.File;
 import java.io.IOException;

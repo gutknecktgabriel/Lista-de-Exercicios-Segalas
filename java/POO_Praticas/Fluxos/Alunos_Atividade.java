@@ -1,4 +1,4 @@
-package Exercicios.Exercicios_Logica_OO.Fluxos;
+package POO_Praticas.Fluxos;
 
 
 import java.io.*;

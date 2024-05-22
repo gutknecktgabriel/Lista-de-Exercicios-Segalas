@@ -8,16 +8,15 @@ public class Complexo {
         this.numReal = numReal;
         this.numeroImaginario = numeroImaginario;
     }
-
     public float getNumReal() {
         return numReal;
     }
 
-    public float getImagiaria() {
+    public float getNumeroImaginario() {
         return numeroImaginario;
     }
     public double modulo(){
-        return Math.sqrt(numReal * numReal + numeroImaginario * numeroImaginario);
+        return Math.sqrt(numReal * numReal) + (numeroImaginario * numeroImaginario);
     }
     public double angulo(){
         return Math.toDegrees(Math.atan2(numeroImaginario,numReal));
