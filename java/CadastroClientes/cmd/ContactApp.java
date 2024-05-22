@@ -11,5 +11,11 @@ public class ContactApp {
         Scanner terminal = new Scanner(System.in);
         ClienteView view = new ClienteView();
         view.showMenu(terminal);
+
+
+
+
+
+
     }
 }
