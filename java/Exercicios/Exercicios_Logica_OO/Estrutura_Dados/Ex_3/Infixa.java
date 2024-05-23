@@ -1,13 +1,14 @@
 package Exercicios.Exercicios_Logica_OO.Estrutura_Dados.Ex_3;
 
 import java.util.HashMap;
-import java.util.regex.Pattern;
+import java.util.Map;
+
 
 public class Infixa<T> {
     private T[] info;
     private int limitePilha;
     private int tamanhoMax;
-    String contaMatematica = "( 96 + 3 ) * 89 / 5";
+
 
     public Infixa() {
         info = (T[]) new Object[limitePilha];
@@ -46,15 +47,13 @@ public class Infixa<T> {
         return tamanhoMax;
     }
 
-    public static String operators(String infixa) {
-
-        HashMap<String, Integer> operadoresAritmeticos = new HashMap<>();
-        operadoresAritmeticos.put("+", 1);
-        operadoresAritmeticos.put("-", 1);
-        operadoresAritmeticos.put("*", 2);
-        operadoresAritmeticos.put("/", 2);
-        operadoresAritmeticos.put("(", 0);
-        return infixa;
+    private static Map<String, Integer> precedencia = new HashMap<>();
+    static {
+        precedencia.put("+", 1);
+        precedencia.put("-", 1);
+        precedencia.put("*", 2);
+        precedencia.put("/", 2);
+        precedencia.put("(", 0);
     }
 
     public String conversao(String expressaoInfixa) {
@@ -63,10 +62,19 @@ public class Infixa<T> {
         String[] tokens = expressaoInfixa.split("");
 
         for (String token : tokens) {
-            if (token.matches("\\d+")){
-                resultado.append(pilha.pop());
+            if (token.matches("\\d+")) {
+                resultado.append(token).append(" ");
+            } else if (token.equals(")")) {
+                while (!pilha.isEmpty(true) && pilha.peek().equals("(")) {
+                    resultado.append(pilha.pop()).append(" ");
+                }
+                pilha.pop();
+            } else {
+                while (!pilha.isEmpty(true) &&  precedencia.get(token)<= precedencia.get(token)){
+                    resultado.append(pilha.pop()).append(" ");
+                }
             }
         }
-        return expressaoInfixa;
+        return null;
     }
 }
