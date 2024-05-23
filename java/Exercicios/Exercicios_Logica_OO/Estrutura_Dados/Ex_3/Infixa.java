@@ -1,6 +1,7 @@
 package Exercicios.Exercicios_Logica_OO.Estrutura_Dados.Ex_3;
 
 import java.util.HashMap;
+import java.util.regex.Pattern;
 
 public class Infixa<T> {
     private T[] info;
@@ -45,7 +46,7 @@ public class Infixa<T> {
         return tamanhoMax;
     }
 
-    public static void operators(String infixa) {
+    public static String operators(String infixa) {
 
         HashMap<String, Integer> operadoresAritmeticos = new HashMap<>();
         operadoresAritmeticos.put("+", 1);
@@ -53,15 +54,18 @@ public class Infixa<T> {
         operadoresAritmeticos.put("*", 2);
         operadoresAritmeticos.put("/", 2);
         operadoresAritmeticos.put("(", 0);
+        return infixa;
     }
 
     public String conversao(String expressaoInfixa) {
         StringBuilder resultado = new StringBuilder();
         Infixa<String> pilha = new Infixa<>();
-        String[] tokens = expressaoInfixa.split(" ");
+        String[] tokens = expressaoInfixa.split("");
 
-        for (String token : tokens){
-
+        for (String token : tokens) {
+            if (token.matches("\\d+")){
+                resultado.append(pilha.pop());
+            }
         }
         return expressaoInfixa;
     }
