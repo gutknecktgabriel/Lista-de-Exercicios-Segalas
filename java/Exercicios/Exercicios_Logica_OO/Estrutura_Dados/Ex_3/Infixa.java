@@ -17,7 +17,7 @@ public class Infixa<T> {
     }
 
     public void add(T valor) {
-        if (limitePilha > tamanhoMax) {
+        if (tamanhoMax > limitePilha) {
             throw new RuntimeException("Pilha estourada, valor máximo atingido");
         } else {
             info[tamanhoMax] = valor;
@@ -48,6 +48,7 @@ public class Infixa<T> {
     }
 
     private static Map<String, Integer> precedencia = new HashMap<>();
+
     static {
         precedencia.put("+", 1);
         precedencia.put("-", 1);
@@ -70,10 +71,11 @@ public class Infixa<T> {
                 }
                 pilha.pop();
             } else {
-                while (!pilha.isEmpty(true) &&  precedencia.get(token)<= precedencia.get(token)){
+                while (!pilha.isEmpty(true) && precedencia.get(token) <= precedencia.get(token)) {
                     resultado.append(pilha.pop()).append(" ");
                 }
             }
+
         }
         return null;
     }
