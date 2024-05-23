@@ -6,6 +6,7 @@ public class Infixa<T> {
     private T[] info;
     private int limitePilha;
     private int tamanhoMax;
+    String contaMatematica = "( 96 + 3 ) * 89 / 5";
 
     public Infixa() {
         info = (T[]) new Object[limitePilha];
@@ -23,18 +24,14 @@ public class Infixa<T> {
     }
 
     public boolean isEmpty(boolean vazio) {
-        if (tamanhoMax <= 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return tamanhoMax == 0;
     }
 
     public T peek() {
         if (isEmpty(true)) {
             throw new RuntimeException("Pilha vazia!");
         }
-        return info[tamanhoMax - 1];
+        return info[tamanhoMax + 1];
     }
 
     public T pop() {
@@ -47,24 +44,25 @@ public class Infixa<T> {
     public int tamanhoMax() {
         return tamanhoMax;
     }
-    public static Infixa<String> converter(String infixa){
-        String vetorCharInfixa[] = infixa.split(" ");
+
+    public static void operators(String infixa) {
+
+        HashMap<String, Integer> operadoresAritmeticos = new HashMap<>();
+        operadoresAritmeticos.put("+", 1);
+        operadoresAritmeticos.put("-", 1);
+        operadoresAritmeticos.put("*", 2);
+        operadoresAritmeticos.put("/", 2);
+        operadoresAritmeticos.put("(", 0);
+    }
+
+    public String conversao(String expressaoInfixa) {
+        StringBuilder resultado = new StringBuilder();
         Infixa<String> pilha = new Infixa<>();
-        Infixa<String> posFixa = new Infixa<>();
+        String[] tokens = expressaoInfixa.split(" ");
 
-        String contaMatematica = "( 96 + 3 ) * 89 / 5";
-        int contagem = 0;
-        int topoPilha = 0;
-        String opcoesDeOperacao = null;
+        for (String token : tokens){
 
-        HashMap<String,Integer> operadoresAritmeticos = new HashMap<>();
-
-        operadoresAritmeticos.put("+",1);
-        operadoresAritmeticos.put("-",1);
-        operadoresAritmeticos.put("*",2);
-        operadoresAritmeticos.put("/",2);
-        operadoresAritmeticos.put("(",0);
-
-        return null;
+        }
+        return expressaoInfixa;
     }
 }
