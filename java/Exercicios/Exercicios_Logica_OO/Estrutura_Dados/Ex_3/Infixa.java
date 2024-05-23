@@ -1,11 +1,13 @@
 package Exercicios.Exercicios_Logica_OO.Estrutura_Dados.Ex_3;
 
-public class Infixa_Para_Posfixa<T> {
+import java.util.HashMap;
+
+public class Infixa<T> {
     private T[] info;
     private int limitePilha;
     private int tamanhoMax;
 
-    public Infixa_Para_Posfixa(int limitePilha) {
+    public Infixa() {
         info = (T[]) new Object[limitePilha];
         this.limitePilha = limitePilha;
         this.tamanhoMax = 10000;
@@ -29,11 +31,10 @@ public class Infixa_Para_Posfixa<T> {
     }
 
     public T peek() {
-        T valor;
-        valor = peek();
-        tamanhoMax = tamanhoMax + 1;
-        return valor;
-
+        if (isEmpty(true)) {
+            throw new RuntimeException("Pilha vazia!");
+        }
+        return info[tamanhoMax - 1];
     }
 
     public T pop() {
@@ -45,5 +46,25 @@ public class Infixa_Para_Posfixa<T> {
 
     public int tamanhoMax() {
         return tamanhoMax;
+    }
+    public static Infixa<String> converter(String infixa){
+        String vetorCharInfixa[] = infixa.split(" ");
+        Infixa<String> pilha = new Infixa<>();
+        Infixa<String> posFixa = new Infixa<>();
+
+        String contaMatematica = "( 96 + 3 ) * 89 / 5";
+        int contagem = 0;
+        int topoPilha = 0;
+        String opcoesDeOperacao = null;
+
+        HashMap<String,Integer> operadoresAritmeticos = new HashMap<>();
+
+        operadoresAritmeticos.put("+",1);
+        operadoresAritmeticos.put("-",1);
+        operadoresAritmeticos.put("*",2);
+        operadoresAritmeticos.put("/",2);
+        operadoresAritmeticos.put("(",0);
+
+        return null;
     }
 }
