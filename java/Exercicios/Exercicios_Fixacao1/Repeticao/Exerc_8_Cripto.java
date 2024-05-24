@@ -7,9 +7,7 @@ public class Exerc_8_Cripto {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        //Varaiavel frase
         String frase;
-
 
         System.out.print("Digite a frase para criptografarmos: ");
         frase = scanner.nextLine();

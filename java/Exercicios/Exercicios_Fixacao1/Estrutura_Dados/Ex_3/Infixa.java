@@ -3,21 +3,19 @@ package Exercicios.Exercicios_Logica_OO.Estrutura_Dados.Ex_3;
 import java.util.HashMap;
 import java.util.Map;
 
-
 public class Infixa<T> {
     private T[] info;
     private int limitePilha;
     private int tamanhoMax;
 
-
-    public Infixa() {
+    public Infixa(int limitePilha) {
         info = (T[]) new Object[limitePilha];
         this.limitePilha = limitePilha;
-        this.tamanhoMax = 10000;
+        this.tamanhoMax = 0;
     }
 
     public void add(T valor) {
-        if (tamanhoMax > limitePilha) {
+        if (tamanhoMax >= limitePilha) {
             throw new RuntimeException("Pilha estourada, valor máximo atingido");
         } else {
             info[tamanhoMax] = valor;
@@ -25,25 +23,27 @@ public class Infixa<T> {
         }
     }
 
-    public boolean isEmpty(boolean vazio) {
+    public boolean isEmpty() {
         return tamanhoMax == 0;
     }
 
     public T peek() {
-        if (isEmpty(true)) {
-            throw new RuntimeException("Pilha vazia!");
+        if (isEmpty()) {
+            throw new RuntimeException("Pilha vazia");
         }
-        return info[tamanhoMax + 1];
+        return info[tamanhoMax - 1];
     }
 
     public T pop() {
-        T valor;
-        valor = pop();
+        if (isEmpty()) {
+            throw new RuntimeException("Pilha vazia");
+        }
+        T valor = info[tamanhoMax - 1];
         tamanhoMax = tamanhoMax - 1;
         return valor;
     }
 
-    public int tamanhoMax() {
+    public int tamanho() {
         return tamanhoMax;
     }
 
@@ -57,26 +57,40 @@ public class Infixa<T> {
         precedencia.put("(", 0);
     }
 
-    public String conversao(String expressaoInfixa) {
+    public String converterParaPosfixa(String expressaoInfixa) {
         StringBuilder resultado = new StringBuilder();
-        Infixa<String> pilha = new Infixa<>();
-        String[] tokens = expressaoInfixa.split("");
+        Infixa<String> pilha = new Infixa<>(expressaoInfixa.length());
+        String[] tokens = expressaoInfixa.split(" ");
 
         for (String token : tokens) {
             if (token.matches("\\d+")) {
                 resultado.append(token).append(" ");
+            } else if (token.equals("(")) {
+                pilha.add(token);
             } else if (token.equals(")")) {
-                while (!pilha.isEmpty(true) && pilha.peek().equals("(")) {
+                while (!pilha.isEmpty() && !pilha.peek().equals("(")) {
                     resultado.append(pilha.pop()).append(" ");
                 }
                 pilha.pop();
             } else {
-                while (!pilha.isEmpty(true) && precedencia.get(token) <= precedencia.get(token)) {
+                while (!pilha.isEmpty() && precedencia.get(token) <= precedencia.get(pilha.peek())) {
                     resultado.append(pilha.pop()).append(" ");
                 }
+                pilha.add(token);
             }
-
         }
-        return null;
+
+        while (!pilha.isEmpty()) {
+            resultado.append(pilha.pop()).append(" ");
+        }
+
+        return resultado.toString().trim();
+    }
+
+    public static void main(String[] args) {
+        Infixa<String> infixaParaPosfixa = new Infixa<>(100);
+        String expressaoMatematica = "3 + 4 * 2 / ( 1 - 5 )";
+        String expressaoPosfixa = infixaParaPosfixa.converterParaPosfixa(expressaoMatematica);
+        System.out.println("Expressão Posfixa: " + expressaoPosfixa);
     }
 }
