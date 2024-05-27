@@ -23,8 +23,17 @@ public class Principal {
         lista.adiciona(6);
         System.out.println(lista);
 
-        lista.limpa();
-        System.out.println(lista);
+        System.out.println("--------------------------------------------------------------");
 
+        System.out.println("Busca por elemento: ");
+        System.out.println(lista.buscaPorElemento(1));
+        System.out.println(lista.buscaPorElemento(2));
+        System.out.println(lista.buscaPorElemento(3));
+
+        System.out.println("--------------------------------------------------------------");
+        System.out.println("Busca por posição: ");
+        System.out.println(lista.buscaPorPosicao(1));
+        System.out.println(lista.buscaPorPosicao(2));
+        System.out.println(lista.buscaPorPosicao(3));
     }
 }
