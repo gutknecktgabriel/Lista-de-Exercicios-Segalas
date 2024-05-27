@@ -114,6 +114,18 @@ public class ListaEncadeada<T> {
         return removido;
     }
 
+    public T removeFinal(){
+        if (this.tamanho == 0){
+            throw new RuntimeException("A lista está vazia");
+        }
+        T removidoUltimo = this.ultimo.getElemento();
+        this.ultimo = this.ultimo.getProximo();
+        this.tamanho--;
+
+        return removidoUltimo;
+    }
+
+
 
     @Override
     public String toString() {
