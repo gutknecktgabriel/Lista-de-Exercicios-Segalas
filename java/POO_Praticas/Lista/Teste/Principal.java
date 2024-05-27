@@ -6,7 +6,9 @@ public class Principal {
     public static void main(String[] args) {
 //        testesIniciais();
 //        adicionaInicio();
-        adicionaNaPosicao();
+//        adicionaNaPosicao();
+          removeInicio();
+
     }
 
     public static void adicionaNaPosicao(){
@@ -33,6 +35,16 @@ public class Principal {
         System.out.println(lista);
     }
 
+    public static void removeInicio() {
+        ListaEncadeada<Integer> lista = new ListaEncadeada<>();
+
+        lista.adiciona(1);
+        lista.adiciona(2);
+        lista.adiciona(3);
+
+        System.out.println("Elemento removido: " + lista.removeInicio());
+        System.out.println("Lista atualizada após a remoção do elemento: " + lista);
+    }
 
     public static void testesIniciais() {
 
