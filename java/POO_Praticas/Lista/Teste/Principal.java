@@ -23,5 +23,8 @@ public class Principal {
         lista.adiciona(6);
         System.out.println(lista);
 
+        lista.limpa();
+        System.out.println(lista);
+
     }
 }
