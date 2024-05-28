@@ -138,7 +138,7 @@ public class ListaEncadeada<T> {
 
     public void removerNaPosicao(int posicao, T elemento) {
         if (posicao < 0 || posicao > tamanho) {
-            throw new IllegalArgumentException("Tem algo de errado");
+            throw new IllegalArgumentException("Posição inexistente ou inválida.");
         }
         if (posicao == 0){
             remove(elemento);
