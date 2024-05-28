@@ -66,11 +66,10 @@ public class Principal {
         lista.adiciona(3);
         lista.adiciona(4);
         lista.adiciona(5);
-        System.out.println(lista);
+        System.out.println("Lista antiga: " + lista);
 
         lista.removerNaPosicao(0,2);
         System.out.println("Lista atualizada: " + lista);
-
     }
 
     public static void testesIniciais() {
