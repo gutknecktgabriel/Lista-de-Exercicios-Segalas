@@ -8,7 +8,8 @@ public class Principal {
 //        adicionaInicio();
 //        adicionaNaPosicao();
 //        removeInicio();
-        removeFinal();
+//        removeFinal();
+        removerNaPosicao();
 
     }
 
@@ -16,11 +17,12 @@ public class Principal {
         ListaEncadeada<Integer> lista = new ListaEncadeada<>();
         lista.adiciona(1);
         lista.adiciona(2);
+        lista.adiciona(3);
         lista.adiciona(4);
+        lista.adiciona(6);
 
-        lista.adicionarNaPosicao(0, 0);
-        lista.adicionarNaPosicao(4, 5);
-        lista.adicionarNaPosicao(2, 3);
+        lista.adicionarNaPosicao(2, 4);
+
 
         System.out.println(lista);
 
@@ -56,6 +58,18 @@ public class Principal {
 
         System.out.println("Elemento removido: " + lista.removeFinal());
         System.out.println("Lista atualizada após a remoção: " + lista);
+
+    }
+    public static void removerNaPosicao(){
+        ListaEncadeada<Integer> lista = new ListaEncadeada<>();
+        lista.adiciona(2);
+        lista.adiciona(3);
+        lista.adiciona(4);
+        lista.adiciona(5);
+        System.out.println(lista);
+
+        lista.removerNaPosicao(0,2);
+        System.out.println("Lista atualizada: " + lista);
 
     }
 
