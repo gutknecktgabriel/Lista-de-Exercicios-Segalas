@@ -9,7 +9,6 @@ import javax.swing.JTextField;
 public class TelaCalculador {
 	
 	public static void main(String[] args) {
-		
 		JFrame janela = new JFrame("Multiplicação Demorada");
 
 		JTextField primeiro = new JTextField(10);
