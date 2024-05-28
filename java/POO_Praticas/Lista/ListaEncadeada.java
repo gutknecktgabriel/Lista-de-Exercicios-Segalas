@@ -26,6 +26,17 @@ public class ListaEncadeada<T> {
         this.tamanho++;
     }
 
+    public void remove(T elemento) {
+        No<T> celula = new No<T>(elemento);
+        if (this.tamanho == 0) {
+            this.inicio = celula;
+        } else {
+            this.ultimo.setProximo(celula);
+        }
+        this.ultimo = celula;
+        this.tamanho--;
+    }
+
     public void limpa() {
 
         for (No<T> atual = this.inicio; atual != null; ) {
@@ -108,14 +119,14 @@ public class ListaEncadeada<T> {
         this.inicio = this.inicio.getProximo();
         this.tamanho--;
 
-        if (this.tamanho == 0){
+        if (this.tamanho == 0) {
             this.ultimo = null;
         }
         return removido;
     }
 
-    public T removeFinal(){
-        if (this.tamanho == 0){
+    public T removeFinal() {
+        if (this.tamanho == 0) {
             throw new RuntimeException("A lista está vazia");
         }
         T removidoUltimo = this.ultimo.getElemento();
@@ -125,7 +136,17 @@ public class ListaEncadeada<T> {
         return removidoUltimo;
     }
 
+    public void removerNaPosicao(int posicao, T elemento) {
+        if (posicao < 0 || posicao > tamanho) {
+            throw new IllegalArgumentException("Tem algo de errado");
+        }
+        if (posicao == 0){
+            remove(elemento);
+        } else if (posicao == tamanho) {
+            remove(elemento);
+        }
 
+    }
 
     @Override
     public String toString() {
