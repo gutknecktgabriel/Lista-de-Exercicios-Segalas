@@ -1,5 +1,5 @@
 
-package POO_Praticas.Threads;
+package POO_Praticas.Threads.Calculadora;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,6 +27,7 @@ public class AcaoBotao implements ActionListener {
 
         Thread threadCalculo = new Thread(tarefa);
         threadCalculo.start();
+
 
     }
 

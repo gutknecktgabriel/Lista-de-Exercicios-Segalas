@@ -1,4 +1,6 @@
-package POO_Praticas.Threads;
+package POO_Praticas.Threads.Calculadora;
+
+import POO_Praticas.Threads.Calculadora.AcaoBotao;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;

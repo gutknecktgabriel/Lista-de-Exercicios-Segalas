@@ -1,4 +1,4 @@
-package POO_Praticas.Threads;
+package POO_Praticas.Threads.Calculadora;
 import javax.swing.*;
 import java.math.BigInteger;
 
