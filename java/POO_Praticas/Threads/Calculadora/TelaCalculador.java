@@ -32,6 +32,7 @@ public class TelaCalculador {
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		janela.pack();
 		janela.setVisible(true);
+
 	}
 }
 
