@@ -11,6 +11,8 @@ public class TarefaMultiplicacao implements Runnable {
         this.primeiro = primeiro;
         this.segundo = segundo;
         this.resultado = resultado;
+
+
     }
 
     @Override
