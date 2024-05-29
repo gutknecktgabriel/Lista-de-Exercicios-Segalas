@@ -6,13 +6,17 @@ import java.util.Scanner;
 public class Desafio_2 extends Thread {
     public static int resultado = 0;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
+
         Desafio_2 thread = new Desafio_2();
         thread.start();
         while (thread.isAlive()) {
             int n1;
             int n2;
+            int cont = 0;
+            int valorMax = 5;
+            int valorMin = 1;
             String op;
 
             System.out.print("Digite o primeiro valor: ");
@@ -42,6 +46,10 @@ public class Desafio_2 extends Thread {
                     resultado = n1 / n2;
                     System.out.println("Resultado da divisão: " + resultado);
                     break;
+            }
+            for (int i = valorMax; i >= valorMin ; i--) {
+                thread.sleep(1000);
+                System.out.println("Encerrando o programa em: " + i + " segundos...");
             }
         }
     }
