@@ -1,4 +1,4 @@
-package POO_Praticas.Threads;
+package POO_Praticas.Threads.Estudos;
 
 public class Estudo_1 extends Thread {
     public static void main(String[] args) throws InterruptedException {

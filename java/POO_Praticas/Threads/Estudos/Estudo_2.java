@@ -1,4 +1,4 @@
-package POO_Praticas.Threads;
+package POO_Praticas.Threads.Estudos;
 
 public class Estudo_2 extends Thread{
     public static int cont = 0;
