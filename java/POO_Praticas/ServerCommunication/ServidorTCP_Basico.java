@@ -13,14 +13,14 @@ public class ServidorTCP_Basico {
             ServerSocket server = new ServerSocket(4578);
             System.out.println("Server iniciado na porta: 4578");
             while (true){
-                Socket usuario = server.accept();
-                System.out.println("Usuário conectado: " + usuario.getInetAddress().getHostAddress());
+                Socket cliente = server.accept();
+                System.out.println("Cliente conectado: " + cliente.getInetAddress().getHostAddress());
 
-                ObjectOutputStream saida = new ObjectOutputStream(usuario.getOutputStream());
+                ObjectOutputStream saida = new ObjectOutputStream(cliente.getOutputStream());
                 saida.flush();
                 saida.writeObject(new Date());
                 saida.close();
-                usuario.close();
+                cliente.close();
             }
         }
         catch (IOException e){
