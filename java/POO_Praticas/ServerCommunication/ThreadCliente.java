@@ -1,5 +1,7 @@
 package POO_Praticas.ServerCommunication;
 
+import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
@@ -26,7 +28,7 @@ public class ThreadCliente extends Thread {
 
             while (leitura != -1) {
                 if (leitura != -2) {
-                    saida.write(buffer,0,leitura);
+                    saida.write(buffer, 0, leitura);
                 }
                 leitura = arq.read(buffer);
             }
@@ -34,15 +36,14 @@ public class ThreadCliente extends Thread {
             entrada.close();
             saida.close();
             cliente.close();
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Erro durante leitura da thread: " + e.getMessage());
         }
         try {
             cliente.close();
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
+
