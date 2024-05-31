@@ -19,7 +19,7 @@ public class ServidorArquivo {
             while (true) {
                 Socket clie = serv.accept();
                 // Inicia thread do cliente
-//                new ThreadClie(clie).start();
+                new ThreadCliente(clie).start();
             }
         }
         catch (IOException e){
