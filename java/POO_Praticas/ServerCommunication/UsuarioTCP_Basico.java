@@ -8,7 +8,7 @@ import java.util.Date;
 public class UsuarioTCP_Basico {
     public static void main(String[] args) {
         try {
-            Socket usuario = new Socket("Gabs",4578);
+            Socket usuario = new Socket("LOCAL",4578);
             ObjectInputStream entrada = new ObjectInputStream(usuario.getInputStream());
             Date data_atual = (Date) entrada.readObject();
             JOptionPane.showMessageDialog(null,"Data recevida do servidor: " + data_atual.toString());
