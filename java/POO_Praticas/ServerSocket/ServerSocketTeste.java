@@ -18,14 +18,17 @@ public class ServerSocketTeste {
 
             Scanner scanner = new Scanner(cliente.getInputStream());
 
-            while (scanner.hasNextLine()){
-                System.out.println(scanner.hasNextLine());
+            while (scanner.hasNextLine()) {
+                String mensagem = scanner.nextLine();
+                System.out.println("Mensagem recebida: " + mensagem);
             }
             scanner.close();
+            cliente.close();
             server.close();
 
         } catch (IOException e) {
-            Logger.getLogger(ServerSocket.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(ServerSocketTeste.class.getName()).log(Level.SEVERE, null, e);
         }
     }
 }
+
