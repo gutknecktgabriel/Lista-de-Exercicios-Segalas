@@ -15,6 +15,7 @@ public class ServidorTCP_Basico {
             while (true){
                 Socket usuario = server.accept();
                 System.out.println("Usuário conectado: " + usuario.getInetAddress().getHostAddress());
+
                 ObjectOutputStream saida = new ObjectOutputStream(usuario.getOutputStream());
                 saida.flush();
                 saida.writeObject(new Date());
