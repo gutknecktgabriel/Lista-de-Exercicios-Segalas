@@ -52,4 +52,8 @@ public class Ponto2D {
         return Double.compare(ponto2D.x, x) == 0 &&
                 Double.compare(ponto2D.y, y) == 0;
     }
+
+    public void converterObjString() {
+
+    }
 }
