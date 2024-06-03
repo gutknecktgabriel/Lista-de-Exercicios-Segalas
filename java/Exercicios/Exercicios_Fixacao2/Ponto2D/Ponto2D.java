@@ -60,7 +60,13 @@ public class Ponto2D {
                 ", y=" + y +
                 '}';
     }
-    public double calcularDistancia(Ponto2D distancia){
 
+    public double calcularDistancia(Ponto2D outro) {
+        double deltaX = this.x - outro.x;
+        double deltaY = this.y - outro.y;
+        return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    }
+    public Ponto2D clone(){
+        return new Ponto2D(this);
     }
 }
