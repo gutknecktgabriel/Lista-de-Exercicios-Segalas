@@ -3,10 +3,12 @@ package Exercicios.Exercicios_Fixacao2.Ponto2D;
 public class Ponto2D {
     private double pontoHorizontal;
     private double pontoVertical;
+    private double marcacaoPlanoCartesiano;
 
-    public Ponto2D(double pontoHorizontal, double pontoVertical) {
+    public Ponto2D(double pontoHorizontal, double pontoVertical, double marcacaoPlanoCartesiano) {
         this.pontoHorizontal = pontoHorizontal;
         this.pontoVertical = pontoVertical;
+        this.marcacaoPlanoCartesiano = marcacaoPlanoCartesiano;
     }
 
     public double getPontoHorizontal() {
@@ -25,4 +27,7 @@ public class Ponto2D {
         this.pontoVertical = pontoVertical;
     }
 
+    public double getMarcacaoPlanoCartesiano() {
+        return marcacaoPlanoCartesiano;
+    }
 }
