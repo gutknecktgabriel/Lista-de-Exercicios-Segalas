@@ -45,8 +45,11 @@ public class Ponto2D {
         this.y = ponto.y;
     }
 
-    @Override
     public boolean equals(Object obj) {
-        return false;
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Ponto2D ponto2D = (Ponto2D) obj;
+        return Double.compare(ponto2D.x, x) == 0 &&
+                Double.compare(ponto2D.y, y) == 0;
     }
 }
