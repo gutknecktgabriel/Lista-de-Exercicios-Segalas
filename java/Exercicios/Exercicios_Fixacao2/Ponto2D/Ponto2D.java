@@ -53,7 +53,14 @@ public class Ponto2D {
                 Double.compare(ponto2D.y, y) == 0;
     }
 
-    public void converterObjString() {
+    @Override
+    public String toString() {
+        return "Ponto2D{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
+    public double calcularDistancia(Ponto2D distancia){
 
     }
 }
