@@ -17,5 +17,8 @@ public class Ponto2D {
         this.x = ponto.x;
         this.y = ponto.y;
     }
-
+    public void movimentacaoPontos(){
+        this.x = x;
+        this.y = y;
+    }
 }
