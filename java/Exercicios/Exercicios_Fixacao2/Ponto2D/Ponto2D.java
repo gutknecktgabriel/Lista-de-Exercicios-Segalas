@@ -62,11 +62,14 @@ public class Ponto2D {
     }
 
     public double calcularDistancia(Ponto2D outro) {
+        double resultadoDaDistancia;
         double deltaX = this.x - outro.x;
         double deltaY = this.y - outro.y;
-        return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+        double resultado;
+        return resultado = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
     }
-    public Ponto2D clone(){
+
+    public Ponto2D clone() {
         return new Ponto2D(this);
     }
 }
