@@ -1,4 +1,4 @@
-package Exercicios.Exercicios_Fixacao2.Contador;
+package Exercicios.Exercicios_Fixacao2.Ex1;
 
 public class Contador {
     private int valor = 10;
