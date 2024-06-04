@@ -1,4 +1,4 @@
-package Exercicios.Exercicios_Fixacao2.Ponto2D;
+package Exercicios.Exercicios_Fixacao2.Ex2;
 
 public class PlanoCartesiano {
     public static void main(String[] args) {
