@@ -1,7 +1,6 @@
 package Exercicios.Exercicios_Fixacao2.Ex5;
 
 public class Circulo {
-
     private double raio;
     private double x;
     private double y;
