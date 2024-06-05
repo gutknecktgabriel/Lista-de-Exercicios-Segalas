@@ -1,26 +1,27 @@
 package Exercicios.Exercicios_Fixacao2.Ex3;
 
 public class NumeroComplexo {
-    NumeroComplexo numComplexo = new NumeroComplexo(0,0);
     private int numInteiro;
     private int numFracionario;
-    private int a;
-    private int bi;
-    private int b;
-    private int d;
-    private int c;
-    private int di;
-    private int i;
+    private int a = 30;
+    private int bi = 32;
+    private int b = 22;
+    private int d = 90;
+    private int c = 12;
+    private int di = 56;
+    private int i = 0;
     private int resultado;
     private int somaPrimaria;
+    private int somaSecundaria;
     private int somaBC;
     private int somaAC;
     private int somaBD;
     private int somaAD;
 
-    public NumeroComplexo(int numInteiro, int numFracionario) {
+    public NumeroComplexo(int numComplexo, int numInteiro, int numFracionario, int resultado) {
         this.numInteiro = numInteiro;
         this.numFracionario = numFracionario;
+        this.resultado = resultado;
     }
 
     public int getNumInteiro() {
@@ -135,37 +136,35 @@ public class NumeroComplexo {
         return somaPrimaria;
     }
 
+    public int getSomaSecundaria() {
+        return somaSecundaria;
+    }
+
+
     public int somar() {
         somaPrimaria = (a + bi) + (c + di);
-        somaPrimaria = (a + c) + (b + d);
-        resultado += somaPrimaria;
+        somaSecundaria += somaPrimaria + (a + c) + (b + d);
+        resultado += somaSecundaria;
         return resultado;
     }
 
     public int subtrair() {
         somaPrimaria = (a + bi) - (c + di);
-        somaPrimaria = (a - c) + (b - d);
-        resultado += somaPrimaria;
+        somaSecundaria += somaPrimaria + (a - c) + (b - d);
+        resultado += somaSecundaria;
         return resultado;
     }
 
     public int multiplicacao() {
         somaPrimaria = (a + bi) * (c + di);
-        somaPrimaria = (numComplexo.getSomaAC() - numComplexo.getSomaBD() + (numComplexo.getSomaAD() + numComplexo.getSomaBC()) + i);
+        somaSecundaria += somaPrimaria + (somaAC() - somaBD() + (somaAD() + somaBC()) + i);
         resultado += somaPrimaria;
         return resultado;
     }
-    public int divisao(){
+    public int divisao() {
         somaPrimaria = (a + bi) / (c + di);
-        somaPrimaria = (numComplexo.getSomaAC() + numComplexo.getSomaBD() / ( c * c + d * d) + (numComplexo.getSomaBC() - numComplexo.getSomaAD() / (c * c + d * d)) + i);
+        somaSecundaria += somaPrimaria + (somaAC + somaBD / (c * c + d * d) + (somaBC() - somaAD() / (c * c + d * d)) + i);
         resultado += somaPrimaria;
         return resultado;
-    }
-
-    @Override
-    public String toString() {
-        return "NumeroComplexo{" +
-                "numComplexo=" + numComplexo +
-                '}';
     }
 }
