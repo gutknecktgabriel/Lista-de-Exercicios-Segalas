@@ -2,6 +2,7 @@ package Exercicios.Exercicios_Fixacao2.Ex4;
 
 public class Main {
     public static void main(String[] args) {
+
         Reta reta1 = new Reta(2, 3);
         Reta reta2 = new Reta(1, 5, 3, 9);
 
