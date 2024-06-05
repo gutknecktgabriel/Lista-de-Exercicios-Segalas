@@ -1,6 +1,7 @@
 package Exercicios.Exercicios_Fixacao2.Ex3;
 
 public class NumeroComplexo {
+
     private int numInteiro;
     private int numFracionario;
     private int a = 30;
