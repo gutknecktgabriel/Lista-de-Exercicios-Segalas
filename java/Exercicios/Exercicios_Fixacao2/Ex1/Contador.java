@@ -17,3 +17,4 @@ public class Contador {
         return valor = 10;
     }
 }
+
