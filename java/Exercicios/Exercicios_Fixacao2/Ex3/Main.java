@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         int operacao = 0;
         NumeroComplexo numComplexo = new NumeroComplexo(0,0,0,0);
