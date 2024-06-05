@@ -1,6 +1,7 @@
 package Exercicios.Exercicios_Fixacao2.Ex3;
 
 public class NumeroComplexo {
+    NumeroComplexo numComplexo = new NumeroComplexo(0,0);
     private int numInteiro;
     private int numFracionario;
     private int a;
@@ -11,6 +12,7 @@ public class NumeroComplexo {
     private int di;
     private int i;
     private int resultado;
+    private int somaPrimaria;
     private int somaBC;
     private int somaAC;
     private int somaBD;
@@ -129,4 +131,41 @@ public class NumeroComplexo {
         return somaAD = a + d;
     }
 
+    public int getSomaPrimaria() {
+        return somaPrimaria;
+    }
+
+    public int somar() {
+        somaPrimaria = (a + bi) + (c + di);
+        somaPrimaria = (a + c) + (b + d);
+        resultado += somaPrimaria;
+        return resultado;
+    }
+
+    public int subtrair() {
+        somaPrimaria = (a + bi) - (c + di);
+        somaPrimaria = (a - c) + (b - d);
+        resultado += somaPrimaria;
+        return resultado;
+    }
+
+    public int multiplicacao() {
+        somaPrimaria = (a + bi) * (c + di);
+        somaPrimaria = (numComplexo.getSomaAC() - numComplexo.getSomaBD() + (numComplexo.getSomaAD() + numComplexo.getSomaBC()) + i);
+        resultado += somaPrimaria;
+        return resultado;
+    }
+    public int divisao(){
+        somaPrimaria = (a + bi) / (c + di);
+        somaPrimaria = (numComplexo.getSomaAC() + numComplexo.getSomaBD() / ( c * c + d * d) + (numComplexo.getSomaBC() - numComplexo.getSomaAD() / (c * c + d * d)) + i);
+        resultado += somaPrimaria;
+        return resultado;
+    }
+
+    @Override
+    public String toString() {
+        return "NumeroComplexo{" +
+                "numComplexo=" + numComplexo +
+                '}';
+    }
 }
