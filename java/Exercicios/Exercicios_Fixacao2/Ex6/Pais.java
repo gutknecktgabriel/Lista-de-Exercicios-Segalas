@@ -45,4 +45,7 @@ public class Pais {
     public void setPopulacao(String populacao) {
         this.populacao = populacao;
     }
+    public void verificarIgualdade(){
+
+    }
 }
