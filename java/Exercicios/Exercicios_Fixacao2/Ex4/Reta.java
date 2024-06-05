@@ -1,6 +1,7 @@
 package Exercicios.Exercicios_Fixacao2.Ex4;
 
 public class Reta {
+
     private double coeAngular;
     private double coeLinear;
 
