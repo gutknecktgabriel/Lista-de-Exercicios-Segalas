@@ -29,7 +29,7 @@ public class Reta {
     }
 
     public String toString() {
-        return "y = " + coeAngular + "x + " + coeLinear;
+        return "y = " + coeAngular + " x + " + coeLinear;
     }
 
     public Ponto interseccao(Reta outraReta) {
