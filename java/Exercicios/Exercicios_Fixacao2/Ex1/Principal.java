@@ -2,6 +2,7 @@ package Exercicios.Exercicios_Fixacao2.Ex1;
 
 public class Principal {
     public static void main(String[] args) {
+
         Contador contador = new Contador();
 
         System.out.println("Valor do contador: " + contador.getValor());
