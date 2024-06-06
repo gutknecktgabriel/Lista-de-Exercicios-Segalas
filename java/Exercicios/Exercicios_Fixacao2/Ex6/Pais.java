@@ -1,25 +1,23 @@
 package Exercicios.Exercicios_Fixacao2.Ex6;
 
 public class Pais {
-    private String codigoISO;
+    private String codIso;
     private String nome;
-    private String dimensao;
-    private String populacao;
+    private double dimensao;
+    private int populacao;
 
-    public Pais(String codigoISO, String nome, String dimensao, String populacao) {
-        this.codigoISO = codigoISO;
+    public Pais(String codIso, String nome, double dimensao) {
+        this.codIso = codIso;
         this.nome = nome;
         this.dimensao = dimensao;
-        this.populacao = populacao;
-
     }
 
-    public String getCodigoISO() {
-        return codigoISO;
+    public String getCodIso() {
+        return codIso;
     }
 
-    public void setCodigoISO(String codigoISO) {
-        this.codigoISO = codigoISO;
+    public void setCodIso(String codIso) {
+        this.codIso = codIso;
     }
 
     public String getNome() {
@@ -30,22 +28,28 @@ public class Pais {
         this.nome = nome;
     }
 
-    public String getDimensao() {
+    public double getDimensao() {
         return dimensao;
     }
 
-    public void setDimensao(String dimensao) {
+    public void setDimensao(double dimensao) {
         this.dimensao = dimensao;
     }
 
-    public String getPopulacao() {
+    public int getPopulacao() {
         return populacao;
     }
 
-    public void setPopulacao(String populacao) {
+    public void setPopulacao(int populacao) {
         this.populacao = populacao;
     }
-    public void verificarIgualdade(){
 
+    public boolean verificarIgualdade(Pais pais) {
+        return this.codIso.equals(pais.getCodIso());
+    }
+
+
+    public double densidade() {
+        return this.populacao / this.densidade();
     }
 }
