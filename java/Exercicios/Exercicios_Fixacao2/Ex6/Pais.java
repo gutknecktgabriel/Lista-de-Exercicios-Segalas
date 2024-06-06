@@ -47,7 +47,7 @@ public class Pais extends ArrayList {
     }
 
     public boolean verificarIgualdade(Pais pais) {
-        return this.codIso.equals(pais.getCodIso());
+        return codIso.equals(pais.getCodIso());
     }
 
     public boolean limitrofe(Pais pais) {
@@ -55,7 +55,7 @@ public class Pais extends ArrayList {
     }
 
     public double densidade() {
-        return this.populacao / this.densidade();
+        return populacao / densidade();
     }
 
     public void vizinhos(Pais pais) {
