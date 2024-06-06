@@ -57,4 +57,11 @@ public class Pais extends ArrayList {
     public double densidade() {
         return this.populacao / this.densidade();
     }
+
+    public void vizinhos(Pais pais) {
+        System.out.println("Lista de vizinhos: ");
+        for (int i = 0; i < pais.size(); i++) {
+
+        }
+    }
 }
