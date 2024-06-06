@@ -26,9 +26,9 @@ public class Continente extends ArrayList {
         return pais.getPopulacao() / pais.getDimensao();
     }
 
-    public Pais getPaisMaiorPopulacao() {
+    public Pais paisMaiorPopulacao() {
         if (paises.isEmpty()) {
-            return null;
+            System.out.println("Não há países adicionados para realizar o processo.");
         }
         Pais maiorPopulacao = paises.get(0);
         for (Pais pais : paises) {
@@ -38,9 +38,10 @@ public class Continente extends ArrayList {
         }
         return maiorPopulacao;
     }
-    public Pais getPaisMenorPopulação(){
-        if (paises.isEmpty()){
-            return null;
+
+    public Pais paisMenorPopulação() {
+        if (paises.isEmpty()) {
+            System.out.println("Não há países adicionados para realizar o processo.");
         }
         Pais menorPopulação = paises.get(0);
         for (Pais pais : paises) {
@@ -51,4 +52,32 @@ public class Continente extends ArrayList {
         return menorPopulação;
     }
 
+    public Pais paisMaiorDimensao() {
+        if (paises.isEmpty()) {
+            System.out.println("Não há países adicionados para realizar o processo.");
+        }
+        Pais maiorDimensao = paises.get(0);
+        for (Pais pais : paises) {
+            if (pais.getDimensao() > maiorDimensao.getDimensao()) {
+                maiorDimensao = pais;
+            }
+        }
+        return maiorDimensao;
+    }
+
+    public Pais menorDimensao() {
+        if (paises.isEmpty()) {
+            System.out.println("Não há países adicionados para realizar o processo.");
+        }
+        Pais menorDimensao = paises.get(0);
+        for (Pais pais : paises) {
+            if (pais.getDimensao() < menorDimensao.getDimensao()) {
+                menorDimensao = pais;
+            }
+        }
+        return menorDimensao;
+    }
+    public double razaoTerritorial() {
+        return 0;
+    }
 }
