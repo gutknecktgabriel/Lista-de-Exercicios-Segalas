@@ -61,7 +61,7 @@ public class Pais extends ArrayList {
     public void vizinhos(Pais pais) {
         System.out.println("Lista de vizinhos: ");
         for (int i = 0; i < pais.size(); i++) {
-
+            vizinhos((Pais) pais.get(i));
         }
     }
 }
