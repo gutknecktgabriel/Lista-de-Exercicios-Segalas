@@ -1,6 +1,8 @@
 package Exercicios.Exercicios_Fixacao2.Ex6;
 
-public class Pais {
+import java.util.ArrayList;
+
+public class Pais extends ArrayList {
     private String codIso;
     private String nome;
     private double dimensao;
@@ -48,6 +50,9 @@ public class Pais {
         return this.codIso.equals(pais.getCodIso());
     }
 
+    public boolean limitrofe(Pais pais) {
+        return this.contains(pais);
+    }
 
     public double densidade() {
         return this.populacao / this.densidade();
