@@ -5,13 +5,14 @@ import java.util.ArrayList;
 public class Pais extends ArrayList {
     private String codIso;
     private String nome;
-    private double dimensao;
+    private int dimensao;
     private int populacao;
 
-    public Pais(String codIso, String nome, double dimensao) {
+    public Pais(String codIso, String nome, int dimensao,int populacao) {
         this.codIso = codIso;
         this.nome = nome;
         this.dimensao = dimensao;
+        this.populacao = populacao;
     }
 
     public String getCodIso() {
@@ -34,7 +35,7 @@ public class Pais extends ArrayList {
         return dimensao;
     }
 
-    public void setDimensao(double dimensao) {
+    public void setDimensao(int dimensao) {
         this.dimensao = dimensao;
     }
 
@@ -54,8 +55,8 @@ public class Pais extends ArrayList {
         return this.contains(pais);
     }
 
-    public double densidade() {
-        return populacao / densidade();
+    public int densidade() {
+        return populacao / dimensao;
     }
 
     public void vizinhos(Pais pais) {
