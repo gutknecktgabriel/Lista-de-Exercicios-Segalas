@@ -14,4 +14,41 @@ public class Continente extends ArrayList {
         paises.add(pais);
     }
 
+    public double dimensaoTotal(Pais pais) {
+        return pais.getDimensao();
+    }
+
+    public int populacaoTotal(Pais pais) {
+        return pais.getPopulacao();
+    }
+
+    public double densidadePopulacional(Pais pais) {
+        return pais.getPopulacao() / pais.getDimensao();
+    }
+
+    public Pais getPaisMaiorPopulacao() {
+        if (paises.isEmpty()) {
+            return null;
+        }
+        Pais maiorPopulacao = paises.get(0);
+        for (Pais pais : paises) {
+            if (pais.getPopulacao() > maiorPopulacao.getPopulacao()) {
+                maiorPopulacao = pais;
+            }
+        }
+        return maiorPopulacao;
+    }
+    public Pais getPaisMenorPopulação(){
+        if (paises.isEmpty()){
+            return null;
+        }
+        Pais menorPopulação = paises.get(0);
+        for (Pais pais : paises) {
+            if (pais.getPopulacao() < menorPopulação.getPopulacao()) {
+                menorPopulação = pais;
+            }
+        }
+        return menorPopulação;
+    }
+
 }
