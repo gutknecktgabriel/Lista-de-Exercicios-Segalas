@@ -65,7 +65,7 @@ public class Continente extends ArrayList {
         return maiorDimensao;
     }
 
-    public Pais menorDimensao() {
+    public Pais paisMenorDimensao() {
         if (paises.isEmpty()) {
             System.out.println("Não há países adicionados para realizar o processo.");
         }
@@ -77,7 +77,10 @@ public class Continente extends ArrayList {
         }
         return menorDimensao;
     }
+
     public double razaoTerritorial() {
-        return 0;
+        double resultadoRazao;
+        resultadoRazao = paisMaiorDimensao().getDimensao() / paisMenorDimensao().getDimensao();
+        return resultadoRazao;
     }
 }
