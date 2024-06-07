@@ -7,7 +7,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         Pessoa pessoa = new Pessoa("Maria");
-        Pessoa pessoa2 = new Pessoa("Maria");
+        Pessoa pessoa2 = new Pessoa("Joao");
 
         System.out.print("Informe o nome da sua mãe: ");
         pessoa.setMae(scanner.next());
@@ -15,7 +15,11 @@ public class Main {
         System.out.print("Informe o nome da sua mãe: ");
         pessoa2.setMae(scanner.next());
 
-        System.out.println("É a mesma pessoa ? " + pessoa.getMae().equals(pessoa2.getMae()));
+        System.out.println("Informe o nome do seu pai: ");
+        pessoa.setPai(scanner.next());
+
+        System.out.println("Informe o nome do seu pai: ");
+        pessoa2.setPai(scanner.next());
 
     }
 }
