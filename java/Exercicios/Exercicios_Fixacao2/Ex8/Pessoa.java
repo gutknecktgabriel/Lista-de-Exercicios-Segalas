@@ -26,6 +26,14 @@ public class Pessoa {
         this.mae = mae;
     }
 
+    public String getPai() {
+        return pai;
+    }
+
+    public void setPai(String pai) {
+        this.pai = pai;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -33,6 +41,26 @@ public class Pessoa {
         return Objects.equals(nome, pessoa.nome) && Objects.equals(mae, pessoa.mae);
     }
 
+    public boolean saoIrmas(Pessoa outraPessoa) {
+        if (this.pai != null && outraPessoa.getPai() != null && this.pai.equals(outraPessoa.getPai())) {
+            return true;
+        }
+        if (this.mae != null && outraPessoa.getMae() != null && this.mae.equals(outraPessoa.getMae())) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean antecessor(Pessoa eAntecessor) {
+        if (eAntecessor == null) {
+            return false;
+        }
+        if (this.equals(eAntecessor.getPai()) || this.equals(eAntecessor.getMae())) {
+            return true;
+        }
+        return antecessor(eAntecessor);
+    }
 }
+
 
 
