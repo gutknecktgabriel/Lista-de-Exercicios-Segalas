@@ -15,7 +15,9 @@ public class Pessoa {
     }
 
     public Pessoa(String nome) {
-        this(nome, null, null);
+        this.nome = nome;
+        this.pai = null;
+        this.mae = null;
     }
 
     public String getMae() {
@@ -38,7 +40,12 @@ public class Pessoa {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Pessoa pessoa)) return false;
-        return Objects.equals(nome, pessoa.nome) && Objects.equals(mae, pessoa.mae);
+        return Objects.equals(nome, pessoa.nome) && Objects.equals(mae, pessoa.mae) && Objects.equals(pai, pessoa.pai);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, mae, pai);
     }
 
     public boolean saoIrmas(Pessoa outraPessoa) {
@@ -50,15 +57,8 @@ public class Pessoa {
         }
         return false;
     }
+    public void antecessor() {
 
-    public boolean antecessor(Pessoa eAntecessor) {
-        if (eAntecessor == null) {
-            return false;
-        }
-        if (this.equals(eAntecessor.getPai()) || this.equals(eAntecessor.getMae())) {
-            return true;
-        }
-        return antecessor(eAntecessor);
     }
 }
 
