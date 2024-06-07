@@ -1,9 +1,11 @@
 package Exercicios.Exercicios_Fixacao2.Ex8;
 
-public class Pessoa {
-    private String nome = "Gabriel";
-    private String mae = null;
-    private String pai = null;
+import java.util.ArrayList;
+
+public class Pessoa extends ArrayList {
+    private String nome;
+    private String mae;
+    private String pai;
 
     public Pessoa(String nome, String mae, String pai) {
         this.nome = nome;
@@ -11,36 +13,9 @@ public class Pessoa {
         this.pai = pai;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public String getMae() {
-        return mae;
-    }
-
-    public String getPai() {
-        return pai;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setMae(String mae) {
-        this.mae = mae;
-    }
-
-    public void setPai(String pai) {
-        this.pai = pai;
-    }
-
-    public boolean igualdadeSemantica() {
-        return nome.equals(mae);
-    }
-
-    public void verificarIrmandade() {
-
-
+    public Pessoa(String nome) {
+        this(nome, null, null);
     }
 }
+
+
