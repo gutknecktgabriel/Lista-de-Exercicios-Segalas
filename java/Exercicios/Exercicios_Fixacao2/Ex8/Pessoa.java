@@ -39,7 +39,7 @@ public class Pessoa {
         return nome.equals(mae);
     }
 
-    public boolean verificarIrmandade() {
+    public void verificarIrmandade() {
 
     }
 }
