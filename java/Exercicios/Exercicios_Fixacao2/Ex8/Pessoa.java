@@ -8,6 +8,7 @@ public class Pessoa {
     private String mae;
     private String pai;
 
+
     public Pessoa(String nome, String mae, String pai) {
         this.nome = nome;
         this.mae = mae;
@@ -55,12 +56,30 @@ public class Pessoa {
         if (this.mae != null && outraPessoa.getMae() != null && this.mae.equals(outraPessoa.getMae())) {
             return true;
         }
+
         return false;
     }
-    public void antecessor() {
 
+    public boolean antecessor(Pessoa outraPessoa) {
+        if (outraPessoa == null) {
+            return false;
+        }
+        if (this.equals(outraPessoa.getPai()) || this.equals(outraPessoa.getMae())) {
+            return true;
+        }
+        Pessoa paiPessoa = new Pessoa(outraPessoa.getPai());
+        Pessoa maePessoa = new Pessoa(outraPessoa.getMae());
+        if (outraPessoa.getPai() != null && antecessor(paiPessoa)) {
+            return true;
+        }
+        if (outraPessoa.getMae() != null && antecessor(maePessoa)) {
+            return true;
+        }
+        return false;
     }
 }
+
+
 
 
 
