@@ -10,21 +10,7 @@ public class Conjunto {
     private String[] elementos;
 
 
-    public Conjunto(List<String> conjunto, String elemento, String[] elementos) {
-        this.conjunto = conjunto;
-        this.elemento = elemento;
-        this.elementos = elementos;
-    }
-
     public Conjunto() {
-    }
-
-    public List<String> getConjunto() {
-        return conjunto;
-    }
-
-    public void setConjunto(List<String> conjunto) {
-        this.conjunto = conjunto;
     }
 
     public String getElemento() {
@@ -63,16 +49,16 @@ public class Conjunto {
         if (conjunto.contains(elemento)) {
             System.out.println("O elemento já existe na lista");
         } else {
-            conjunto.add(String.valueOf(elemento));
-            adicionaQtd++;
+            conjunto.add((elemento));
         }
+        adicionaQtd++;
     }
 
     public void remover(String elemento) {
         if (conjunto.contains(elemento)) {
-            System.out.println("");
+            System.out.println("Error");
         } else {
-            conjunto.add(String.valueOf(elemento));
+            conjunto.remove(String.valueOf(elemento));
             removerQtd--;
         }
     }
