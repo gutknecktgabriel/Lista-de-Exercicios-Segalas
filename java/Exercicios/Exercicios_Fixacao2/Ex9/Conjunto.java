@@ -3,13 +3,20 @@ package Exercicios.Exercicios_Fixacao2.Ex9;
 import java.util.List;
 
 public class Conjunto {
+    private int adicionaQtd;
+    private int removerQtd;
     private List<String> conjunto;
     private String elemento;
-    private int adicionarQtd;
+    private String[] elementos;
 
-    public Conjunto(List<String> elemento, int adicionarQtd) {
-        this.conjunto = elemento;
-        this.adicionarQtd = adicionarQtd;
+
+    public Conjunto(List<String> conjunto, String elemento, String[] elementos) {
+        this.conjunto = conjunto;
+        this.elemento = elemento;
+        this.elementos = elementos;
+    }
+
+    public Conjunto() {
     }
 
     public List<String> getConjunto() {
@@ -20,14 +27,6 @@ public class Conjunto {
         this.conjunto = conjunto;
     }
 
-    public int getAdicionarQtd() {
-        return adicionarQtd;
-    }
-
-    public void setAdicionarQtd(int adicionarQtd) {
-        this.adicionarQtd = adicionarQtd;
-    }
-
     public String getElemento() {
         return elemento;
     }
@@ -36,18 +35,81 @@ public class Conjunto {
         this.elemento = elemento;
     }
 
-    public void adicionar() {
-        if (conjunto.contains(elemento)){
+    public int getAdicionaQtd() {
+        return adicionaQtd;
+    }
+
+    public void setAdicionaQtd(int adicionaQtd) {
+        this.adicionaQtd = adicionaQtd;
+    }
+
+    public String[] getElementos() {
+        return elementos;
+    }
+
+    public void setElementos(String[] elementos) {
+        this.elementos = elementos;
+    }
+
+    public int getRemoverQtd() {
+        return removerQtd;
+    }
+
+    public void setRemoverQtd(int removerQtd) {
+        this.removerQtd = removerQtd;
+    }
+
+    public void adicionar(String elemento) {
+        if (conjunto.contains(elemento)) {
             System.out.println("O elemento já existe na lista");
-        }
-        else {
+        } else {
             conjunto.add(String.valueOf(elemento));
+            adicionaQtd++;
         }
     }
 
-    public void verificarExistencia(){
-        if (conjunto.contains(elemento)){
-            System.out.println("O elemento ja pertence ao conjunto");
+    public void remover(String elemento) {
+        if (conjunto.contains(elemento)) {
+            System.out.println("");
+        } else {
+            conjunto.add(String.valueOf(elemento));
+            removerQtd--;
+        }
+    }
+
+    public boolean verificarExistencia(String elemento) {
+        return elemento.contains(elemento);
+    }
+
+    public Conjunto uniao(Conjunto outro) {
+        Conjunto resultado = new Conjunto();
+        for (String elemento : this.elementos) {
+            resultado.adicionar(elemento);
+        }
+        for (String elemento : outro.elementos) {
+            resultado.adicionar(elemento);
+        }
+        return resultado;
+    }
+
+    public Conjunto inter(Conjunto outro) {
+        Conjunto resultadoInter = new Conjunto();
+        for (String elemento : this.elementos) {
+            resultadoInter.verificarExistencia(elemento);
+        }
+        for (String elemento : outro.elementos) {
+            verificarExistencia(elemento);
+        }
+        return resultadoInter;
+    }
+
+    public void remover() {
+        if (conjunto.contains(elemento)) {
+            System.out.println("O elemento já existe na lista");
+        } else {
+            conjunto.remove(String.valueOf(elemento));
+            adicionaQtd--;
         }
     }
 }
+
