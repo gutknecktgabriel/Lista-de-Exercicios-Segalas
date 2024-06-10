@@ -6,20 +6,21 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Pessoa pessoa = new Pessoa("Maria");
-        Pessoa pessoa2 = new Pessoa("Joao");
+        Pessoa maria = new Pessoa("Maria");
+        Pessoa joao = new Pessoa("Joao");
 
         System.out.print("Informe o nome da sua mãe: ");
-        pessoa.setMae(scanner.next());
+        maria.setMae(scanner.next());
 
         System.out.print("Informe o nome da sua mãe: ");
-        pessoa2.setMae(scanner.next());
+        joao.setMae(scanner.next());
 
-        System.out.println("Informe o nome do seu pai: ");
-        pessoa.setPai(scanner.next());
+        System.out.print("Informe o nome do seu pai: ");
+        maria.setPai(scanner.next());
 
-        System.out.println("Informe o nome do seu pai: ");
-        pessoa2.setPai(scanner.next());
+        System.out.print("Informe o nome do seu pai: ");
+        joao.setPai(scanner.next());
+
 
     }
 }
