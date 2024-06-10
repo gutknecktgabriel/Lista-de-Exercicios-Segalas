@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Conjunto {
     private List<String> conjunto;
+    private String elemento;
     private int adicionarQtd;
 
     public Conjunto(List<String> elemento, int adicionarQtd) {
@@ -27,16 +28,26 @@ public class Conjunto {
         this.adicionarQtd = adicionarQtd;
     }
 
+    public String getElemento() {
+        return elemento;
+    }
+
+    public void setElemento(String elemento) {
+        this.elemento = elemento;
+    }
+
     public void adicionar() {
-        if (conjunto.contains(conjunto)){
+        if (conjunto.contains(elemento)){
             System.out.println("O elemento já existe na lista");
         }
         else {
-            conjunto.add(String.valueOf(adicionarQtd));
+            conjunto.add(String.valueOf(elemento));
         }
     }
 
     public void verificarExistencia(){
-
+        if (conjunto.contains(elemento)){
+            System.out.println("O elemento ja pertence ao conjunto");
+        }
     }
 }
