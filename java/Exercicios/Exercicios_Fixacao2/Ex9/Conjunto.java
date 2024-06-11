@@ -53,6 +53,7 @@ public class Conjunto {
         }
         return resultado;
     }
+
     public void exibir() {
         System.out.println(conjunto);
     }
