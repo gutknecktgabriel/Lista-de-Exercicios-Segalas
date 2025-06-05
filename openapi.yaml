@@ -76,6 +76,8 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/PagedListProductPriceDto'
+      security:
+        - bearerAuth: []
 
 components:
   schemas:
