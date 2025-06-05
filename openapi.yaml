@@ -58,11 +58,3 @@ paths:
           description: Unauthorized - Authentication required
         '500':
           description: Server error
-components:
-  securitySchemes:
-    ApiKeyAuth:
-      type: apiKey
-      in: header
-      name: Authorization
-security:
-  - ApiKeyAuth: []
