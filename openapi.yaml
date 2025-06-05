@@ -74,3 +74,30 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/PagedListProductPriceDto'
+components:
+  schemas:
+    PagedListProductPriceDto:
+      type: object
+      properties:
+        page:
+          type: integer
+          format: int32
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductPriceDto'
+        totalElements:
+          type: integer
+          format: int64
+        totalPages:
+          type: integer
+          format: int64
+        lastPage:
+          type: boolean
+    LoginResponse:
+      type: object
+      properties:
+        token:
+          type: string
+        changePasswordWarning:
+          type: string
