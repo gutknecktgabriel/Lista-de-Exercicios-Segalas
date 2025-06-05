@@ -101,3 +101,31 @@ components:
           type: string
         changePasswordWarning:
           type: string
+ProductPriceDto:
+      type: object
+      properties:
+        name:
+          type: string
+        brand:
+          type: string
+        price:
+          type: string
+        code:
+          type: string
+        lastPurchaseDate:
+          type: string
+          format: date
+        availablePackages:
+          type: array
+          items:
+            type: string
+      RequestCartItemDeletionDto:
+      type: object
+      properties:
+        productCode:
+          type: string
+      securitySchemes:
+      bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
