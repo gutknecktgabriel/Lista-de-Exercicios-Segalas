@@ -30,3 +30,14 @@ paths:
                     type: array
                     items:
                       type: object
+                      properties:
+                        productId:
+                          type: string
+                          example: "123"
+                        productName:
+                          type: string
+                          example: "Notebook XYZ"
+                        price:
+                          type: number
+                          format: float
+                          example: 2999.90
