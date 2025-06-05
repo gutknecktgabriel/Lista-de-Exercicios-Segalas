@@ -1,0 +1,68 @@
+openapi: 3.0.3
+info:
+  title: Product Price API
+  description: API for retrieving product prices from an e-commerce assistant.
+  version: 1.0.0
+servers:
+  - url: https://hmg-api.segs.app.br
+    description: Main server
+paths:
+  /ecommerce/assistant/product-price:
+    get:
+      summary: Get product prices
+      description: Retrieves a list of product prices based on a search query.
+      parameters:
+        - name: q
+          in: query
+          description: Search term for products (e.g., "pizza").
+          required: true
+          schema:
+            type: string
+        - name: page
+          in: query
+          description: Page number for pagination (e.g., 0).
+          required: false
+          schema:
+            type: integer
+            default: 0
+        - name: size
+          in: query
+          description: Number of items per page (e.g., 10).
+          required: false
+          schema:
+            type: integer
+            default: 10
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: "123"
+                        name:
+                          type: string
+                          example: "Pizza Margherita"
+                        price:
+                          type: number
+                          example: 29.99
+        '401':
+          description: Unauthorized - Authentication required
+        '500':
+          description: Server error
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+security:
+  - ApiKeyAuth: []
